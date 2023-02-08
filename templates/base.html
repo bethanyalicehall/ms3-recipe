@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>Reviews</title>
 </head>
+
 <body>
-    
-</body>
+
+    <header>
+        <!-- top navbar -->
+       <nav class="nav-extended text-shadow light-blue darken-1">
+           <div class="nav-wrapper">
+               <a href="#!" class="brand-logo">Scran</a>
+               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+               <ul class="right hide-on-med-and-down">
+                   <li><a href="{{ url_for('get_review') }}">Home</a></li>
+                   <li><a href="#">Profile</a></li>
+                   <li><a href="#">New Task</a></li>
+                   <li><a href="#">Manage Categories</a></li>
+                   <li><a href="#">Log Out</a></li>
+                   <li><a href="#">Log In</a></li>
+                   <li><a href="#">Register</a></li>
+               </ul>
+           </div>
+       </nav>
+       <!-- mobile sidenav -->
+       <ul class="sidenav" id="mobile-demo">
+           <li><h4 class="center-align light-blue-text text-darken 4">Scran</h4></li>
+           <li><a href="{{ url_for('get_review') }}">Home</a></li>
+           <li><a href="#">Profile</a></li>
+           <li><a href="#">New Task</a></li>
+           <li><a href="#">Manage Categories</a></li>
+           <li><a href="#">Log Out</a></li>
+           <li><a href="#">Log In</a></li>
+           <li><a href="#">Register</a></li>
+       </ul>
+   </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+    </body>
+
 </html>
