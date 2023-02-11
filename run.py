@@ -95,7 +95,13 @@ def logout():
     # removes the user from the session cookie
     flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("login"))   
+    return redirect(url_for("login"))
+
+
+@app.route("/add_review")
+def add_review():
+    return render_template("add_review.html")
+
 
 # change debug to false below!
 
