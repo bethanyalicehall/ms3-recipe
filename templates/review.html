@@ -9,12 +9,17 @@
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ review.restaurant_name }}</strong>
+                <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
+            
 
             </div>
              <div class="collapsible-body">
-                <strong>{{ review.cuisine_name }}</strong>
-                <p>{{ review.meal_description }}</p>
+                <strong>{{ review.date_visited }}</strong><br>
+                <p>Cuisine: {{ review.cuisine_name }}</p>
+                <p>Starter: {{ review.starter_description }}</p>
+                <p>Main: {{ review.main_description }}</p>
+                <p>Dessert: {{ review.dessert_description }}</p>
+                <p>Drink: {{ review.drink_description }}</p>
             </div>
         </li>
         {% endfor %}
