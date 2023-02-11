@@ -100,7 +100,8 @@ def logout():
 
 @app.route("/add_review")
 def add_review():
-    return render_template("add_review.html")
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    return render_template("add_review.html", cuisines=cuisines)
 
 
 # change debug to false below!

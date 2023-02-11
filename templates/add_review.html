@@ -14,6 +14,18 @@
                 </div>
             </div>
             <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+					<select id="cuisine_name" name="cuisine_name" class="validate" required>
+                        <option value="" disabled selected>Choose Cuisine</option>
+                        {% for cuisine in cuisines %}
+                            <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="cuisine_name">Cuisine name</label>
+				</div>
+			</div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-location-dot prefix light-blue-text text-darken-4"></i>
                     <input id="restaurant_location" name="restaurant_location" minlength="5" maxlength="50"
@@ -23,7 +35,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-seedling prefix light-blue-text text-darken-4"></i>
                     <textarea id="starter_description" name="starter_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="starter_description">What did you have for a starter?</label>
@@ -31,7 +43,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-burger prefix light-blue-text text-darken-4"></i>
                     <textarea id="main_description" name="main_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="main_description">What did you have for a main?</label>
@@ -39,7 +51,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-ice-cream prefix light-blue-text text-darken-4"></i>
                     <textarea id="dessert_description" name="dessert_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="dessert_description">What did you have for a dessert?</label>
@@ -47,7 +59,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-martini-glass-citrus prefix light-blue-text text-darken-4"></i>
                     <textarea id="drink_description" name="drink_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="drink_description">Anything nice to drink?</label>
@@ -60,18 +72,6 @@
                     <label for="date_visited">When did you eat here?</label>
                 </div>
             </div>
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-						<label for="is_urgent">
-                            <input type="checkbox" id="is_urgent" name="is_urgent">
-                            <span class="lever"></span>
-                            Is Urgent
-                        </label>
-					</div>
-				</div>
-			</div>
         </form>
     </div>
 
