@@ -149,6 +149,18 @@ def delete_review(review_id):
     flash("Review Successfully Deleted")
     return redirect(url_for("get_review"))
 
+
+@app.route("/get_cuisines")
+def get_cuisines():
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template("cuisines.html", cuisines=cuisines)
+
+
+@app.route("/get_specific_cuisines")
+def get_specific_cuisines():
+    reviews = mongo.db.review.find()
+    return render_template("specific_cuisine.html", reviews=reviews)
+
 # change debug to false below!
 
 
