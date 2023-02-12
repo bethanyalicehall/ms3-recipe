@@ -122,10 +122,26 @@ def add_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    if request.method == "POST":
+        submit = {
+            "restaurant_name": request.form.get("restaurant_name"),
+            "cuisine_name": request.form.get("cuisine_name"),
+            "restaurant_location": request.form.get("restaurant_location"),
+            "starter_description": request.form.get("starter_description"),
+            "main_description": request.form.get("main_description"),
+            "dessert": request.form.get("dessert"),
+            "drink_description": request.form.get("drink_description"),
+            "date_visited": request.form.get("date_visited"),
+            "created_by": session["user"]
+        }
+        mongo.db.review.update({"_id": ObjectId(review_id)}, submit)
+        flash("Review Successfully Updated")
+
     review = mongo.db.review.find_one({"_id": ObjectId(review_id)})
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template(
         "edit_review.html", review=review, cuisines=cuisines)
+
 
 # change debug to false below!
 
