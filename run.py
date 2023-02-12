@@ -120,6 +120,13 @@ def add_review():
     return render_template("add_review.html", cuisines=cuisines)
 
 
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    review = mongo.db.review.find_one({"_id": ObjectId(review_id)})
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    return render_template(
+        "edit_review.html", review=review, cuisines=cuisines)
+
 # change debug to false below!
 
 
