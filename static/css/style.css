@@ -16,3 +16,13 @@
     padding: 20px 22px;
     font-weight: 500;
 }
+
+
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col {
+    margin: 5px;
+    line-height: 42px;
+}

@@ -10,7 +10,7 @@
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
-            
+                
 
             </div>
              <div class="collapsible-body">
@@ -21,6 +21,10 @@
                 <p>Dessert: {{ review.dessert_description }}</p>
                 <p>Drink: {{ review.drink_description }}</p>
                 <p><em>Review by: {{ review.created_by }}</em></p>
+                <div class="col s3">
+                    <a href="" class="btn-small light-blue lighten-1">Edit</a>
+                    <a href="" class="btn-small light-blue lighten-1">Delete</a>
+                </div>
             </div>
         </li>
         {% endfor %}
