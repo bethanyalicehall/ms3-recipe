@@ -1,14 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h3 class="center-align light-blue-text text-darken-4">
-                    {{ username }}'s Profile
-                </h3>
-            </div>
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel">
+            <h3 class="center-align light-blue-text text-darken-4">
+                {{ username }}'s Reviews
+            </h3>
         </div>
     </div>
+</div>
+
+        
+
+<ul class="collapsible">
+    {% for review in reviews %}
+    {% if session.user|lower == review.created_by|lower %}
+    <li>
+        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
+
+
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ review.date_visited }}</strong><br>
+            <p>Cuisine: {{ review.cuisine_name }}</p>
+            <p>Starter: {{ review.starter_description }}</p>
+            <p>Main: {{ review.main_description }}</p>
+            <p>Dessert: {{ review.dessert_description }}</p>
+            <p>Drink: {{ review.drink_description }}</p>
+            <p><em>Review by: {{ review.created_by }}</em></p>
+            <div class="col s3">
+                {% if session.user|lower == review.created_by|lower %}
+                <a href="{{ url_for('edit_review', review_id=review._id) }}"
+                    class="btn-small light-blue lighten-1">Edit</a>
+
+                    <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
+                    <!-- Modal Structure -->
+                    <div id="{{ review._id}}" class="modal">
+                        <div class="modal-content">
+                            <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}"
+                                class="modal-close btn-small blue-grey-text text-darken-3">
+                                Delete
+                            </a>
+                            <a href="{{ url_for('get_review') }}" class="modal-close btn-small">
+                                Cancel
+                            </a>
+                        </div>
+                    </div>
+                {% elif session.user|lower == "admin" %}
+                <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
+                <!-- Modal Structure -->
+                <div id="{{ review._id}}" class="modal">
+                    <div class="modal-content">
+                        <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_review', review_id=review._id) }}"
+                            class="modal-close btn-small blue-grey-text text-darken-3">
+                            Delete
+                        </a>
+                        <a href="{{ url_for('get_review') }}" class="modal-close btn-small">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </li>
+  
+    {% endif %}
+    {% endfor %}
+</ul>
+
 
 {% endblock %}

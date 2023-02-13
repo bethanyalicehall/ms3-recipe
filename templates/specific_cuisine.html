@@ -3,7 +3,7 @@
 
 
     
-
+{% if reviews|length > 0 %}
 <ul class="collapsible">
     {% for review in reviews %}
     
@@ -68,7 +68,9 @@
     
     {% endfor %}
 </ul>
-
+{% else %}
+        <h3 class="red-text text-darken-4 center-align">No Reviews found</h3>
+    {% endif %}
 
 
 

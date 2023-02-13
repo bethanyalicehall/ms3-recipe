@@ -26,3 +26,7 @@
     margin: 5px;
     line-height: 42px;
 }
+
+.fa-burger, .fa-pizza-slice, .fa-ice-cream {
+    color: #ffc107;
+  }
