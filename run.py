@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_review")
 def get_review():
-    reviews = mongo.db.review.find()
+    reviews = list(mongo.db.review.find().sort("date_visited"))
     return render_template("review.html", reviews=reviews)
 
 
@@ -129,7 +129,7 @@ def edit_review(review_id):
             "restaurant_location": request.form.get("restaurant_location"),
             "starter_description": request.form.get("starter_description"),
             "main_description": request.form.get("main_description"),
-            "dessert": request.form.get("dessert"),
+            "dessert_description": request.form.get("dessert_description"),
             "drink_description": request.form.get("drink_description"),
             "date_visited": request.form.get("date_visited"),
             "created_by": session["user"]
@@ -156,9 +156,9 @@ def get_cuisines():
     return render_template("cuisines.html", cuisines=cuisines)
 
 
-@app.route("/get_specific_cuisines")
-def get_specific_cuisines():
-    reviews = mongo.db.review.find()
+@app.route("/get_specific_cuisines/<cuisine_name>")
+def get_specific_cuisines(cuisine_name):
+    reviews = list(mongo.db.review.find({'cuisine_name': cuisine_name}))
     return render_template("specific_cuisine.html", reviews=reviews)
 
 # change debug to false below!

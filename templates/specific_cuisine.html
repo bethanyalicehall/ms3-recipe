@@ -2,11 +2,11 @@
 {% block content %}
 
 
-
+    
 
 <ul class="collapsible">
     {% for review in reviews %}
-    {% if review.cuisine_name|lower == "italian"|lower %}
+    
     <li>
         <div class="collapsible-header white-text light-blue darken-4 text-shadow">
             <i class="fas fa-caret-down"></i>
@@ -64,8 +64,13 @@
             </div>
         </div>
     </li>
-    {% endif %}
+  
+    
     {% endfor %}
 </ul>
+
+
+
+
 
 {% endblock %}
