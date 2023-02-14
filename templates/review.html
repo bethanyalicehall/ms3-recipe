@@ -38,6 +38,8 @@
             <p>Main: {{ review.main_description }}</p>
             <p>Dessert: {{ review.dessert_description }}</p>
             <p>Drink: {{ review.drink_description }}</p>
+            <p>Rating: {{ review.overall_rating}}</p>
+            <p>Comments: {{ review.overall_comments}}</p>
             <p><em>Review by: {{ review.created_by }}</em></p>
             <div class="col s3">
                 {% if session.user|lower == review.created_by|lower %}

@@ -112,6 +112,8 @@ def add_review():
             "dessert": request.form.get("dessert"),
             "drink_description": request.form.get("drink_description"),
             "date_visited": request.form.get("date_visited"),
+            "overall_rating": request.form.get("overall_rating"),
+            "overall_comments": request.form.get("overall_comments"),
             "created_by": session["user"]
         }
         mongo.db.review.insert_one(review)
@@ -120,6 +122,9 @@ def add_review():
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template("add_review.html", cuisines=cuisines)
+
+    ratings = mongo.db.ratings.find().sort("overall_rating", 1)
+    return render_template("add_review.html", ratings=ratings)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -134,6 +139,8 @@ def edit_review(review_id):
             "dessert_description": request.form.get("dessert_description"),
             "drink_description": request.form.get("drink_description"),
             "date_visited": request.form.get("date_visited"),
+            "overall_rating": request.form.get("overall_rating"),
+            "overall_comments": request.form.get("overall_comments"),
             "created_by": session["user"]
         }
         mongo.db.review.update({"_id": ObjectId(review_id)}, submit)

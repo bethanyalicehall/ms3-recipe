@@ -72,6 +72,26 @@
                     <label for="date_visited">When did you eat here?</label>
                 </div>
             </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="far fa-comment prefix light-blue-text text-darken-4"></i>
+                    <textarea id="overall_comments" name="overall_comments" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                    <label for="overall_comments">General comments about your experience</label>
+                </div>
+            </div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-star-half-stroke prefix light-blue-text text-darken-4"></i>
+					<select id="overall_rating" name="overall_rating" class="validate" required>
+                        <option value="" disabled selected>Choose rating</option>
+                        {% for rating in ratings %}
+                            <option value="{{ rating.overall_rating }}">{{ rating.overall_rating }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="overall_rating">Rating</label>
+				</div>
+			</div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
