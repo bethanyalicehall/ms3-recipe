@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col s12 m8 offset-m2">
-            <h3 class="center-align light-blue-text text-darken-4">
+            <h3 class="center-align">
                 {{ username |capitalize }}'s Reviews
             </h3>
     </div>
@@ -15,7 +15,7 @@
     {% for review in reviews %}
     {% if session.user|lower == review.created_by|lower %}
     <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+        <div class="collapsible-header">
             <i class="fas fa-caret-down"></i>
             <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
 
@@ -28,11 +28,13 @@
             <p>Main: {{ review.main_description }}</p>
             <p>Dessert: {{ review.dessert_description }}</p>
             <p>Drink: {{ review.drink_description }}</p>
+            <p>Rating: {{ review.overall_rating}}</p>
+            <p>Comments: {{ review.overall_comments}}</p>
             <p><em>Review by: {{ review.created_by }}</em></p>
             <div class="col s3">
                 {% if session.user|lower == review.created_by|lower %}
                 <a href="{{ url_for('edit_review', review_id=review._id) }}"
-                    class="btn-small light-blue lighten-1">Edit</a>
+                    class="btn">Edit</a>
 
                     <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
                     <!-- Modal Structure -->
@@ -42,10 +44,10 @@
                         </div>
                         <div class="modal-footer">
                             <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                                class="modal-close btn-small blue-grey-text text-darken-3">
+                                class="modal-close btn">
                                 Delete
                             </a>
-                            <a href="{{ url_for('get_review') }}" class="modal-close btn-small">
+                            <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small">
                                 Cancel
                             </a>
                         </div>
@@ -62,7 +64,7 @@
                             class="modal-close btn-small blue-grey-text text-darken-3">
                             Delete
                         </a>
-                        <a href="{{ url_for('get_review') }}" class="modal-close btn-small">
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small">
                             Cancel
                         </a>
                     </div>

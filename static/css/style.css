@@ -1,6 +1,7 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+html {
+    background-color: #CAFAFE;
 }
+
 
 .flashes h4 {
     line-height: 2;
@@ -17,8 +18,28 @@
     font-weight: 500;
 }
 
+.collapsible-header {
+    background-color: #39ECCE;
+}
+
+.collapsible-body {
+    background-color: #fc4445;
+    color: white;
+}
+
+
+nav {
+    background-color: #39ECCE;
+}
+
+nav a  {
+    color:#fc4445 !important;
+}
+
 .brand-logo {
     font-family: 'Bebas Neue', cursive;
+    color: #fc4445 !important;
+    text-shadow: none !important;
 }
 
 .btn-small {
@@ -31,5 +52,25 @@
 }
 
 .fa-burger, .fa-pizza-slice, .fa-ice-cream {
-    color: #ffc107;
+    color: #fc4445;
   }
+
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: #fc4445;
+
+  }
+
+.btn {
+background-color: #CAFAFE !important;
+color: black !important;
+}
+  
+.modal-content {
+    color: black;
+}
+
+i {
+    color: #fc4445;
+
+}

@@ -12,6 +12,8 @@ $(document).ready(function () {
             done: "Select"
         }
     });
+
+    //Function to show validation colours on the dropdown choices within the form
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
