@@ -17,6 +17,9 @@
     font-weight: 500;
 }
 
+.brand-logo {
+    font-family: 'Bebas Neue', cursive;
+}
 
 .btn-small {
     margin: 5px;
