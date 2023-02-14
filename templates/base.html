@@ -23,7 +23,7 @@
         <!-- top navbar -->
        <nav class="nav-extended text-shadow" id="navbar">
            <div class="nav-wrapper">
-               <a href="{{ url_for('get_review') }}" class="brand-logo center">Fan of Scran</a>
+               <a href="{{ url_for('get_review') }}" class="brand-logo left">Fan of Scran</a>
                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                <ul class="right hide-on-med-and-down">
                    <li><a href="{{ url_for('get_review') }}">Home</a></li>
@@ -41,7 +41,7 @@
        </nav>
        <!-- mobile sidenav -->
        <ul class="sidenav" id="mobile-demo">
-           <li><h4 class="center-align light-blue-text text-darken 4">Scran</h4></li>
+           <li><h3 class="center-align">Fan of Scran</h3></li>
            <li><a href="{{ url_for('get_review') }}">Home</a></li>
            {% if session.user %}
                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -61,7 +61,7 @@
         {% if messages %}
             {% for message in messages %}
                 <div class="row flashes">
-                    <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                    <h4 class="center-align">{{ message }}</h4>
                 </div>
             {% endfor %}
         {% endif %}
@@ -72,6 +72,31 @@
     {% block content %}
     {% endblock %}
 </main>
+
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Fan of Scran</h5>
+          <p class="grey-text text-lighten-4">The place to be to document all of you restaurant visits and browse other reviews to decide where to go next!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Social</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Instagram <i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Facebook <i class="fa-brands fa-facebook"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Twitter <i class="fa-brands fa-twitter"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">TikTok <i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2023 Fan of Scran
+      </div>
+    </div>
+  </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

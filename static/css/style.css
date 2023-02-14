@@ -2,9 +2,18 @@ html {
     background-color: #CAFAFE;
 }
 
+.flashes {
+    background-color: #F19090;
+}
+
 
 .flashes h4 {
     line-height: 2;
+}
+
+h1 {
+    color: #fc4445;
+    
 }
 
 .datepicker-date-display {
@@ -12,10 +21,14 @@ html {
     -webkit-flex: 1 auto;
     -ms-flex: 1 auto;
     flex: 1 auto;
-    background-color: blue;
-    color: #fff;
+    background-color: #CAFAFE;
+    color: #fc4445 !important;
     padding: 20px 22px;
     font-weight: 500;
+}
+
+.datepicker-date-display .year-text {
+    color: #fc4445;
 }
 
 .collapsible-header {
@@ -23,7 +36,7 @@ html {
 }
 
 .collapsible-body {
-    background-color: #fc4445;
+    background-color: #F19090;
     color: white;
 }
 
@@ -40,6 +53,7 @@ nav a  {
     font-family: 'Bebas Neue', cursive;
     color: #fc4445 !important;
     text-shadow: none !important;
+    padding: 5px !important;
 }
 
 .btn-small {
@@ -74,3 +88,34 @@ i {
     color: #fc4445;
 
 }
+
+footer {
+    background-color:#F19090 !important;
+    color:black !important;
+}
+
+#cuisine-card {
+    background-color: #39ECCE;
+}
+
+.register-link {
+    color: #fc4445 !important;
+}
+
+.parallax-container {
+    height: 400px;
+  }
+
+  .parallax-container .parallax img {
+   
+    opacity: 0.5 !important;
+
+  }
+
+  #mobile-demo {
+    background-color: #39ECCE;
+  }
+
+  #mobile-demo a {
+    color: #fc4445;
+  }
