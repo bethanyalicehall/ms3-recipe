@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('.modal').modal();
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
+        maxDate: new Date(),
         yearRange: 3,
         showClearBtn: true,
         i18n: {

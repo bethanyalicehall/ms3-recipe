@@ -126,3 +126,27 @@ footer {
   data-tooltip {
     background: #fc4445;
   }
+
+  h4 a {
+    color: #F19090;
+  }
+
+  h4 a i {
+    color: #F19090;
+  }
+
+  .opposite-icon {
+    color: #39ECCE;
+  }
+
+  #search-card {
+    background-color: #fc4445;
+  }
+
+  #query {
+    color: white;
+  }
+
+  #search-label {
+    color: white;
+  }
