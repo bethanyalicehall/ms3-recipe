@@ -2,6 +2,33 @@
 {% block content %}
 {% if session.user %}
 <h3 class="header center ">Feeling Hungry?</h3>
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        
+
+        
+        <div class="row center-align">
+          <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
+        </div>
+        
+
+        <div class="row center">
+            <a href="{{ url_for('all_reviews') }}" class="btn btn-large waves-effect waves-light">Browse all reviews</a>
+          </div>
+
+        
+        
+
+      </div>
+    </div>
+    <div class="parallax"><img src="static/img/diner.jpg" alt=""img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
+  </div>
 {% else %}
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -35,7 +62,7 @@
   </div>
 {% endif %}
 
-
+<h4 class="header  ">Recent reviews</h3>
 
 <ul class="collapsible">
     {% for review in reviews %}
