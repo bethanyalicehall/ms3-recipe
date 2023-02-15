@@ -45,6 +45,7 @@
            <li><h3 class="center-align">Fan of Scran</h3></li>
            <li><a href="{{ url_for('get_review') }}">Home</a></li>
            {% if session.user %}
+                   <li><a href="{{ url_for('all_reviews') }}">Reviews</a></li>
                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                    <li><a href="{{ url_for('add_review') }}">New Review</a></li>
                    <li><a href="{{ url_for('get_cuisines') }}">Cuisines</a></li>

@@ -1,23 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Cuisines</h3>
-
-    <div class="row">
-        {% for cuisine in cuisines %}
-            <div class="col s12 m4">
-                <div class="card center-align" id="cuisine-card">
-                    <div class="card-content">
-                        <span class="card-title">{{ cuisine.cuisine_name }}</span>
-                    </div>
-
-                    <div class="card-action">
-                        <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}" class="btn">See reviews</a>
-                        
-                    </div>
-                </div>
+<h3 class="center-align">Cuisines</h3>
+<div class="row">
+    {% for cuisine in cuisines %}
+    <div class="col s12 m4">
+        <div class="card center-align" id="cuisine-card">
+            <div class="card-image">
+                {% if cuisine.cuisine_name == "British" %}
+                <img src="static/img/british.jpg">
+                {% elif cuisine.cuisine_name == "Chinese" %}
+                <img src="static/img/chinese.jpg">
+                {% elif cuisine.cuisine_name == "French" %}
+                <img src="static/img/french.jpg">
+                {% elif cuisine.cuisine_name == "Greek" %}
+                <img src="static/img/greek.jpg">
+                {% elif cuisine.cuisine_name == "Indian" %}
+                <img src="static/img/indian.jpg">
+                {% elif cuisine.cuisine_name == "Italian" %}
+                <img src="static/img/italian.jpg">
+                {% elif cuisine.cuisine_name == "Mexican" %}
+                <img src="static/img/mexican.jpg">
+                {% elif cuisine.cuisine_name == "Spanish" %}
+                <img src="static/img/spanish.jpg">
+                {% else %}
+                <img src="static/img/other.jpg">
+                {% endif %}
+                
+                <span class="card-title"></span>
             </div>
-        {% endfor %}
-    </div>
+            <div class="card-title">
+                <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}">{{ cuisine.cuisine_name }}
+                    <br>
+                {% if cuisine.cuisine_name == "British" %}
+                British
+                {% elif cuisine.cuisine_name == "Chinese" %}
+                中国人
+                {% elif cuisine.cuisine_name == "French" %}
+                français
+                {% elif cuisine.cuisine_name == "Greek" %}
+                Ελληνικά
+                {% elif cuisine.cuisine_name == "Indian" %}
+                भारतीय
+                {% elif cuisine.cuisine_name == "Italian" %}
+                français
 
+                {% elif cuisine.cuisine_name == "Mexican" %}
+                français
+
+                {% elif cuisine.cuisine_name == "Spanish" %}
+                français
+
+                {% else %}
+                français
+
+                {% endif %}
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

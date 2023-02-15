@@ -180,7 +180,8 @@ def get_cuisines():
 
 @app.route("/get_specific_cuisines/<cuisine_name>")
 def get_specific_cuisines(cuisine_name):
-    reviews = list(mongo.db.review.find({'cuisine_name': cuisine_name}))
+    reviews = list(mongo.db.review.find
+            ({'cuisine_name': cuisine_name}).sort("date_visited", -1))
     return render_template("specific_cuisine.html", reviews=reviews)
 
 # change debug to false below!
