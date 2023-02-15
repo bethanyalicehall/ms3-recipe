@@ -174,7 +174,7 @@ def delete_review(review_id):
 
 @app.route("/get_cuisines")
 def get_cuisines():
-    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    cuisines = list(mongo.db.cuisines.find().sort("initial_order", 1))
     return render_template("cuisines.html", cuisines=cuisines)
 
 

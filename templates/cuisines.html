@@ -33,27 +33,23 @@
                 <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}">{{ cuisine.cuisine_name }}
                     <br>
                 {% if cuisine.cuisine_name == "British" %}
-                British
+                <em>British</em>
                 {% elif cuisine.cuisine_name == "Chinese" %}
-                中国人
+                <em>中国人</em>
                 {% elif cuisine.cuisine_name == "French" %}
-                français
+                <em>Français</em>
                 {% elif cuisine.cuisine_name == "Greek" %}
-                Ελληνικά
+                <em>Ελληνικά</em>
                 {% elif cuisine.cuisine_name == "Indian" %}
-                भारतीय
+                <em>भारतीय</em>
                 {% elif cuisine.cuisine_name == "Italian" %}
-                français
-
+                <em>Italiano</em>
                 {% elif cuisine.cuisine_name == "Mexican" %}
-                français
-
+                <em>Mexicano</em>
                 {% elif cuisine.cuisine_name == "Spanish" %}
-                français
-
+                <em>Español</em>
                 {% else %}
-                français
-
+                world cuisines!
                 {% endif %}
                 </a>
                 

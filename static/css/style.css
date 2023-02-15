@@ -150,3 +150,7 @@ footer {
   #search-label {
     color: white;
   }
+
+  .card-title a {
+    color: #fc4445;
+  }
