@@ -29,9 +29,9 @@
                    <li><a href="{{ url_for('get_review') }}">Home</a></li>
                    {% if session.user %}
                    <li><a href="{{ url_for('all_reviews') }}">Reviews</a></li>
-                   <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                   <li><a href="{{ url_for('add_review') }}">New Review</a></li>
                    <li><a href="{{ url_for('get_cuisines') }}">Cuisines</a></li>
+                   <li><a href="{{ url_for('profile', username=session['user']) }}"> My Reviews</a></li>
+                   <li><a href="{{ url_for('add_review') }}">New Review</a></li>
                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                    {% else %}
                    <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -46,13 +46,13 @@
            <li><a href="{{ url_for('get_review') }}">Home</a></li>
            {% if session.user %}
                    <li><a href="{{ url_for('all_reviews') }}">Reviews</a></li>
-                   <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                   <li><a href="{{ url_for('add_review') }}">New Review</a></li>
                    <li><a href="{{ url_for('get_cuisines') }}">Cuisines</a></li>
+                   <li><a href="{{ url_for('profile', username=session['user']) }}">My Reviews</a></li>
+                   <li><a href="{{ url_for('add_review') }}">New Review</a></li>
                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                    {% else %}
                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                   <li><a href="{{ url_for('register') }}">Create Account</a></li>
+                   <li><a href="{{ url_for('register') }}">Sign Up</a></li>
                    {% endif %}
        </ul>
    </header>
