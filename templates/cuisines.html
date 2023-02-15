@@ -6,6 +6,7 @@
     {% for cuisine in cuisines %}
     <div class="col s12 m4">
         <div class="card center-align" id="cuisine-card">
+            <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}">
             <div class="card-image">
                 {% if cuisine.cuisine_name == "British" %}
                 <img src="static/img/british.jpg">
@@ -27,7 +28,7 @@
                 <img src="static/img/other.jpg">
                 {% endif %}
                 
-                <span class="card-title"></span>
+            </a>
             </div>
             <div class="card-title">
                 <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}">{{ cuisine.cuisine_name }}

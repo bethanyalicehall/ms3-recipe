@@ -136,7 +136,7 @@ def add_review():
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     ratings = mongo.db.ratings.find()
     return render_template("add_review.html", 
-    cuisines=cuisines, reviews=reviews)
+    cuisines=cuisines, ratings=ratings)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
