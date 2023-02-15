@@ -122,7 +122,7 @@ def add_review():
             "restaurant_location": request.form.get("restaurant_location"),
             "starter_description": request.form.get("starter_description"),
             "main_description": request.form.get("main_description"),
-            "dessert": request.form.get("dessert"),
+            "dessert_description": request.form.get("dessert_description"),
             "drink_description": request.form.get("drink_description"),
             "date_visited": request.form.get("date_visited"),
             "overall_rating": request.form.get("overall_rating"),
@@ -134,10 +134,9 @@ def add_review():
         return redirect(url_for("get_review"))
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
-    return render_template("add_review.html", cuisines=cuisines)
-
-    ratings = mongo.db.ratings.find().sort("overall_rating", 1)
-    return render_template("add_review.html", ratings=ratings)
+    ratings = mongo.db.ratings.find()
+    return render_template("add_review.html", 
+    cuisines=cuisines, reviews=reviews)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -161,8 +160,10 @@ def edit_review(review_id):
 
     review = mongo.db.review.find_one({"_id": ObjectId(review_id)})
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    ratings = mongo.db.ratings.find()
     return render_template(
-        "edit_review.html", review=review, cuisines=cuisines)
+        "edit_review.html", review=review, 
+        cuisines=cuisines, ratings=ratings)
 
 
 @app.route("/delete_review/<review_id>")
