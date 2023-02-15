@@ -70,8 +70,20 @@
         <div class="collapsible-header">
             <i class="fas fa-angle-down"></i>
             <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
-
-
+            {% if review.overall_rating == "Poor" %}
+            <i class="fas fa-face-frown  tooltipped right"
+                data-position="right" data-tooltip="Poor"></i>
+            {% elif review.overall_rating == "Average" %}
+            <i class="fas fa-face-meh  tooltipped right"
+                data-position="right" data-tooltip="Average"></i>
+            {% elif review.overall_rating == "Good" %}
+            <i class="fas fa-face-smile  tooltipped right"
+                data-position="right" data-tooltip="Good"></i>
+            {% else %}
+            <i class="fas fa-face-grin-hearts  tooltipped right"
+                data-position="right" data-tooltip="Excellent"></i>
+            
+        {% endif %}
         </div>
         <div class="collapsible-body">
             <strong>{{ review.date_visited }}</strong><br>

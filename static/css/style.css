@@ -122,3 +122,7 @@ footer {
   #mobile-demo a {
     color: #fc4445;
   }
+
+  data-tooltip {
+    background: #fc4445;
+  }
