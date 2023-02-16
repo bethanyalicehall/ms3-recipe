@@ -155,7 +155,7 @@ def edit_review(review_id):
             "overall_comments": request.form.get("overall_comments"),
             "created_by": session["user"]
         }
-        mongo.db.review.update({"_id": ObjectId(review_id)}, submit)
+        mongo.db.review.update_one({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
 
     review = mongo.db.review.find_one({"_id": ObjectId(review_id)})
@@ -183,7 +183,7 @@ def get_cuisines():
 def get_specific_cuisines(cuisine_name):
     reviews = list(mongo.db.review.find
             ({'cuisine_name': cuisine_name}).sort("date_visited", -1))
-    return render_template("specific_cuisine.html", reviews=reviews)
+    return render_template("specific_cuisine.html", reviews=reviews, cuisine_name=cuisine_name)
 
 # change debug to false below!
 
