@@ -5,7 +5,9 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
             <h3 class="center-align" id="profile-name">
-                'Insert cuisine' cuisine
+    {% for review in reviews %}
+        {{ review.cuisine_name }} cuisine
+    {% endfor %}
             </h3>
     </div>
 </div>

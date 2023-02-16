@@ -1,168 +1,189 @@
 html {
-    background-color: #CAFAFE;
+  background-color: #CAFAFE;
 }
 
-.flashes {
-    background-color: #F19090;
-}
-
-
-.flashes h4 {
-    line-height: 2;
-}
-
-h1 {
-    color: #fc4445;
-}
-
-.datepicker-date-display {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-    -ms-flex: 1 auto;
-    flex: 1 auto;
-    background-color: #CAFAFE;
-    color: #fc4445 !important;
-    padding: 20px 22px;
-    font-weight: 500;
-}
-
-.datepicker-date-display .year-text {
-    color: #fc4445;
-}
-
-.collapsible-header {
-    background-color: #39ECCE;
-}
-
-.collapsible-body {
-    background-color: #F19090;
-    color: white;
-}
-
+/* Nav bar*/
 
 nav {
-    background-color: #39ECCE;
+  background-color: #39ECCE;
 }
 
-nav a  {
-    color:#fc4445 !important;
+nav a {
+  color: #fc4445 !important;
 }
+
+/* Mobile nav */
+
+#mobile-demo {
+  background-color: #39ECCE;
+}
+
+#mobile-demo a {
+  color: #fc4445;
+}
+
+/* Logo */
 
 .brand-logo {
-    font-family: 'Bebas Neue', cursive;
-    color: #fc4445 !important;
-    text-shadow: none !important;
-    padding: 5px !important;
+  font-family: 'Bebas Neue', cursive;
+  color: #fc4445 !important;
+  text-shadow: none !important;
+  padding: 5px !important;
 }
 
-.btn-small {
-    margin: 5px;
+/* Headers */
+
+h1 {
+  color: #fc4445;
 }
 
-.collapsible-header .col {
-    margin: 5px;
-    line-height: 42px;
+#h1-hungry {
+  background-color: #CAFAFE;
 }
-
-.fa-burger, .fa-pizza-slice, .fa-ice-cream {
-    color: #fc4445;
-  }
 
 h3 {
-    font-family: 'Bebas Neue', cursive;
-    color: #fc4445;
+  font-family: 'Bebas Neue', cursive;
+  color: #fc4445;
 
-  }
-  h4 {
-    font-family: 'Bebas Neue', cursive;
-    color: #fc4445;
+}
 
-  }
+h4 {
+  font-family: 'Bebas Neue', cursive;
+  color: #fc4445;
+
+}
+
+h4 a {
+  color: #F19090;
+}
+
+h4 a i {
+  color: #F19090;
+}
+
+h5 {
+  color: #F19090;
+}
+
+/* Parallax containers */
+
+.parallax-container {
+  height: 400px;
+}
+
+.parallax-container .parallax img {
+  opacity: 0.5 !important;
+}
+
+/* Flash messages */
+
+.flashes {
+  background-color: #F19090;
+}
+
+.flashes h4 {
+  line-height: 2;
+}
+
+/* Buttons */
+
+.btn-small {
+  margin: 5px;
+}
+
 .btn {
-background-color: #CAFAFE !important;
-color: black !important;
-}
-  
-.modal-content {
-    color: black;
-}
-
-i {
-    color: #fc4445;
-
-}
-
-footer {
-    background-color:#F19090 !important;
-    color:black !important;
-}
-
-#cuisine-card {
-    background-color: #39ECCE;
+  background-color: #CAFAFE !important;
+  color: black !important;
 }
 
 .register-link {
-    color: #fc4445 !important;
+  color: #fc4445 !important;
 }
 
-.parallax-container {
-    height: 400px;
-  }
+/* Icons*/
 
-  .parallax-container .parallax img {
-   
-    opacity: 0.5 !important;
+i {
+  color: #fc4445;
+}
 
-  }
 
-  #mobile-demo {
-    background-color: #39ECCE;
-  }
+/* Add/edit review forms */
 
-  #mobile-demo a {
-    color: #fc4445;
-  }
+.datepicker-date-display {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  background-color: #CAFAFE;
+  color: #fc4445 !important;
+  padding: 20px 22px;
+  font-weight: 500;
+}
 
-  data-tooltip {
-    background: #fc4445;
-  }
+.datepicker-date-display .year-text {
+  color: #fc4445;
+}
 
-  h4 a {
-    color: #F19090;
-  }
+/* Review accordians */
 
-  h4 a i {
-    color: #F19090;
-  }
+.collapsible-header {
+  background-color: #39ECCE;
+}
 
-  .opposite-icon {
-    color: #39ECCE;
-  }
+.collapsible-header .col {
+  margin: 5px;
+  line-height: 42px;
+}
 
-  #search-card {
-    background-color: #fc4445;
-  }
+.collapsible-body {
+  background-color: #F19090;
+  color: white;
+}
 
-  #query {
-    color: white;
-  }
+data-tooltip {
+  background: #fc4445;
+}
 
-  #search-label {
-    color: white;
-  }
+.modal-content {
+  color: black;
+}
 
-  .card-title a {
-    color: #fc4445;
-  }
+/* Cuisine cards */
 
-  h5 {
-    color: #F19090;
-  }
+#cuisine-card {
+  background-color: #39ECCE;
+}
 
-  p a {
-    color: #fc4445;
-  }
+.card-title a {
+  color: #fc4445;
+}
 
-  #h1-hungry {
-    background-color: #CAFAFE;
-  }
+p a {
+  color: #fc4445;
+}
+
+
+/* Search feature on reviews page*/
+
+#search-card {
+  background-color: #fc4445;
+}
+
+.opposite-icon {
+  color: #39ECCE;
+}
+
+#query {
+  color: white;
+}
+
+#search-label {
+  color: white;
+}
+
+/* Footer */
+
+footer {
+  background-color: #F19090 !important;
+  color: black !important;
+}
