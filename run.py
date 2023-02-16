@@ -187,8 +187,8 @@ def get_specific_cuisines(cuisine_name):
                            cuisine_name=cuisine_name)
 
 
-@app.route("/404")
-def error():
+@app.errorhandler(404)
+def not_found():
     return render_template("404.html")
 
 # change debug to false below!
