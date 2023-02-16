@@ -188,8 +188,8 @@ def get_specific_cuisines(cuisine_name):
 
 
 @app.errorhandler(404)
-def not_found():
-    return render_template("404.html")
+def not_found(error):
+    return render_template("404.html", error=error)
 
 # change debug to false below!
 
