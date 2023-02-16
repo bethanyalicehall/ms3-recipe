@@ -72,11 +72,11 @@ def login():
         if existing_user:
             # check hashed password match password input from user
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
+               existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # when password is incorrect/does not match hashed password
@@ -100,8 +100,7 @@ def profile(username):
     if session["user"]:
         reviews = list(mongo.db.review.find().sort("date_visited", -1))
         return render_template("profile.html", username=username,
-                reviews=reviews)
-
+                               reviews=reviews)
     return redirect(url_for("login"))
 
 
@@ -135,8 +134,8 @@ def add_review():
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     ratings = mongo.db.ratings.find()
-    return render_template("add_review.html", 
-    cuisines=cuisines, ratings=ratings)
+    return render_template("add_review.html", cuisines=cuisines,
+                           ratings=ratings)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -163,7 +162,7 @@ def edit_review(review_id):
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     ratings = mongo.db.ratings.find()
     return render_template(
-        "edit_review.html", review=review, 
+        "edit_review.html", review=review,
         cuisines=cuisines, ratings=ratings)
 
 
@@ -183,8 +182,9 @@ def get_cuisines():
 @app.route("/get_specific_cuisines/<cuisine_name>")
 def get_specific_cuisines(cuisine_name):
     reviews = list(mongo.db.review.find
-            ({'cuisine_name': cuisine_name}).sort("date_visited", -1))
-    return render_template("specific_cuisine.html", reviews=reviews, cuisine_name=cuisine_name)
+                   ({'cuisine_name': cuisine_name}).sort("date_visited", -1))
+    return render_template("specific_cuisine.html", reviews=reviews,
+                           cuisine_name=cuisine_name)
 
 # change debug to false below!
 
