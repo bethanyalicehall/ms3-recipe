@@ -1,53 +1,51 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--Page title-->
 <h3 class="header center ">Restaurant Reviews</h3>
 
+<!--Parralax container-->
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <div class="row center-align">
-          <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
+        <div class="container">
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <div class="row center-align">
+                <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="parallax"><img src="static/img/table.png" alt="A typical red and white diner booth"img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
-  </div>
+    <div class="parallax"><img src="static/img/table.png" alt="A typical red and white diner booth" img
+            style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
+</div>
 
-  <div class="row card-panel" id="search-card">
+<!--Search card-->
+<div class="row card-panel" id="search-card">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
         <div class="row valign-wrapper center-align">
             <div class="input-field col s12">
                 <i class="fa-regular fa-star prefix opposite-icon"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required placeholder="Search by Restaurant, Location, User or Rating">
+                <input type="text" name="query" id="query" minlength="3" class="validate" required
+                    placeholder="Search by Restaurant, Location, User or Rating">
                 <label for="query" id="search-label">Search</label>
             </div>
-           
-        
         </div>
         <div class="row valign-wrapper center-align">
-            
-           
             <div class="col s6 m6">
                 <button type="submit" class="btn ">
                     <i class="fas fa-search left"></i> Search
                 </button>
             </div>
             <div class="col s6 m6">
-                
                 <a href="{{ url_for('all_reviews') }}" class="btn">Clear</a>
-
             </div>
         </div>
-        
-        
     </form>
 </div>
+
+<!--All reviews from all users-->
 {% if reviews|length > 0 %}
 <ul class="collapsible">
     {% for review in reviews %}
@@ -56,18 +54,14 @@
             <i class="fas fa-angle-down"></i>
             <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
             {% if review.overall_rating == "Poor" %}
-            <i class="fas fa-face-frown  tooltipped right"
-            data-position="right" data-tooltip="Poor"></i>
-            {% elif review.overall_rating == "Average" %}
-            <i class="fas fa-face-meh  tooltipped right"
-                data-position="right" data-tooltip="Average"></i>
-            {% elif review.overall_rating == "Good" %}
-            <i class="fas fa-face-smile  tooltipped right"
-                data-position="right" data-tooltip="Good"></i>
-            {% else %}
-            <i class="fas fa-face-grin-hearts  tooltipped right"
-                data-position="right" data-tooltip="Excellent"></i>
-        {% endif %}
+                <i class="fas fa-face-frown  tooltipped right" data-position="right" data-tooltip="Poor"></i>
+                {% elif review.overall_rating == "Average" %}
+                <i class="fas fa-face-meh  tooltipped right" data-position="right" data-tooltip="Average"></i>
+                {% elif review.overall_rating == "Good" %}
+                <i class="fas fa-face-smile  tooltipped right" data-position="right" data-tooltip="Good"></i>
+                {% else %}
+                <i class="fas fa-face-grin-hearts  tooltipped right" data-position="right" data-tooltip="Excellent"></i>
+            {% endif %}
         </div>
         <div class="collapsible-body">
             <strong>Visited on {{ review.date_visited }}</strong><br>
@@ -81,18 +75,16 @@
             <p><em>Review by: {{ review.created_by }}</em></p>
             <div class="col s3">
                 {% if session.user|lower == review.created_by|lower %}
-                <a href="{{ url_for('edit_review', review_id=review._id) }}"
-                    class="btn ">Edit</a>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn ">Edit</a>
 
-                    <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
+                    <button data-target="{{ review._id }}" class=" btn modal-trigger">Delete </button>
                     <!-- Modal Structure -->
                     <div id="{{ review._id}}" class="modal">
                         <div class="modal-content">
                             <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                                class="modal-close btn">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}" class="modal-close btn">
                                 Delete
                             </a>
                             <a href="{{ url_for('all_reviews') }}" class="modal-close btn">
@@ -101,34 +93,36 @@
                         </div>
                     </div>
                 {% elif session.user|lower == "admin" %}
-                <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
-                <!-- Modal Structure -->
-                <div id="{{ review._id}}" class="modal">
-                    <div class="modal-content">
-                        <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                    <button data-target="{{ review._id }}" class=" btn modal-trigger">Delete </button>
+                    <!-- Modal Structure -->
+                    <div id="{{ review._id}}" class="modal">
+                        <div class="modal-content">
+                            <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}" class="modal-close btn">
+                                Delete
+                            </a>
+                            <a href="{{ url_for('all_reviews') }}" class="modal-close btn">
+                                Cancel
+                            </a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                            class="modal-close btn">
-                            Delete
-                        </a>
-                        <a href="{{ url_for('all_reviews') }}" class="modal-close btn">
-                            Cancel
-                        </a>
-                    </div>
-                </div>
                 {% endif %}
             </div>
         </div>
     </li>
     {% endfor %}
 </ul>
+
+<!--Display message when no reviews match users search-->
 {% else %}
-<h3 class="center-align">No Reviews yet!</h3>
+<h3 class="center-align">No Reviews match your search</h3>
 <h4 class="center-align">
     <a href="{{ url_for('all_reviews') }}">Go back to browsing reviews
         <i class="fa-solid fa-rotate-left"></i>
     </a>
 </h4>
+
 {% endif %}
 {% endblock %}

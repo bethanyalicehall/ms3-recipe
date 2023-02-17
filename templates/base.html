@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Fan of Scran</title>
-    <link rel="shortcut icon" type="image/jpg" href="static/img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="static/img/favicon.ico" />
 </head>
 
 <body>
 
     <header>
-        <!-- top navbar -->
+        <!-- Main navbar -->
         <nav class="nav-extended text-shadow" id="navbar">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_review') }}" class="brand-logo left">Fan of Scran</a>
@@ -41,7 +41,8 @@
                 </ul>
             </div>
         </nav>
-        <!-- mobile sidenav -->
+
+        <!-- Mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
                 <h3 class="center-align">Fan of Scran</h3>
@@ -63,13 +64,13 @@
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h4 class="center-align">{{ message }}</h4>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="row flashes">
+                    <h4 class="center-align">{{ message }}</h4>
+                </div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
     </section>
 
@@ -78,6 +79,7 @@
         {% endblock %}
     </main>
 
+    <!--Footer-->
     <footer class="page-footer">
         <div class="container">
             <div class="row">
