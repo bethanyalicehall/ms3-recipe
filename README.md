@@ -175,22 +175,38 @@ Click [here](media-sources.md) to see details of images used throughout the site
 
 ## Features
 
-### Game boards
-Level 1 and level 2 feature game boards containing 12/20 cards respectivley, a timer, a moves counter, a button to start the timer and a link to the home page.
-- The timer goes up and stops when all the pairs have been found.
-- The moves counter increments each time a card is turned over.
-- The game boards are responsive to support use of different devices
+### Parallax image container on home and reviews page
+The addition of this feature adds some dynamics to the site without being over the top. JQuery from Materialize was used to produce this.
 
-### Win message
-When the player succesfully matches all of the cards on the board, the board flips over and a win message appears.
-- The stats for that game are displayed.
-- An option to play level 1 again or try level 2 are presented.
+### Register/login
+Users can register or login using a username and password. I utilized Werkzeug to generate a password hash for security. Users cannot register with a username that is already taken. Certain pages/features are only visible once logged in. When logged in there is a flash message to welcome the user.
 
-### Fact Cards
-Interactive fact cards that have a high quality animal image on one side and the name of the animal and a fact on the other side, the user can click between each side to learn facts about each animal. The cards sit 3x4 on desktop but are responsive and shrink down to one column on most mobile devices.
+### Review Accordian
+The reviews are displayed within a collapsible, created from Materialize documentation. The header of the review displays the name of the restaurant and the location. There is also a face emoji which displays an emoji depending on the rating, this is tool-tipped so when hovering over the emoji it will display the rating e.g. "Excellent". The body of the review displays all the rest of the information the user has inputted and who the review was by. 
 
-### Interactive links
-All of the links have a pointer change to indicate that they are links to the user
+### Latest Reviews
+On the home page the three most recently created reviews are displayed, this will update every time a new review is added.
+
+### Edit and Delete reviews
+The admin account can delete any reviews to allow monitoring of inappropriate or offensive reviews. A user can edit or delete any of their own reviews. When selecting to delete a review a modal will ask to confirm if the user is sure they want to delete. When a user chooses to edit a review, the same form will load as when they created their review but each data field will have the saved input displayed, and then the user can choose to just edit one field, and the original values of other fields will remain the same.
+
+### All reviews page including search bar
+This page displays all reviews, by all users. There is a seach bar where users can search reviews by restaurant, location or user. Within the search bar there is a clear button to clear the search.
+
+### Adding a new review page
+This page loads a form where users input review information, 
+
+### Cuisine page
+This page displays nine cards each of a different cuisine. The cuisine is titled in English and in the language from the country the cuisine is from. The image and text are linked to a page where reviews only from that cuisine will be displayed.
+
+### Profile page
+This page is titled 'username's reviews, and displays all of the reviews created by the user who is currently logged in.
+
+### Log out
+Within the navbar there is a link to click to log out, this takes the user back to the login page, and will flash a message to confirm to the user that they succesfully logged out.
+
+### Footer
+The footer contains the brand logo, brief information about the site, copyright and links to social media which open in a new tab.
 
 ### Accessibility
 - Alt attributes have been added to all images 
@@ -204,21 +220,51 @@ Meta tags are included within the head element, including a description, the aut
 A custom 404 error page was added, including a link to redirect back to the home page.
 
 ### 500 error page 
-A custom 404 error page was added, including a link to redirect back to the home page.
+A custom 500 error page was added, including a link to redirect back to the home page.
 
 ### Future features to consider
 
-#### Style change on correct match of cards
-As suggested in my feedback from family and friends, it could be a good feature to add to change the colours of the cards when a correct match is found, just to add some further interactivity to the game. This shouldn't be too complex to add in as there is already a function that checks if the two cards match, and makes the cards stay fixed and not flip back over. 
+#### Image upload
+The ability for users to upload and attach images to their reviews, this would add value to each review, as photos could include the food, the drinks, the exterior, the interior, the menu or the receipt.
 
+#### Recently deleted folder
+To further add to the defensive programming, when a user deletes a review, instead of erasing from the database, a condition could be met, which then moved the review to a different page.
 
-#### A table to store your scores in
-To add to the competitive side to the game I think it would be good to add in a feature where you can input your name and then your score would be saved so you could play against others.
+#### Links to Google maps 
+An option to add a google maps link to the review so users can find the location of the restaurant more easily.
 
-#### Further levels of the game 
-Maybe up to 5 levels would draw more players to return to the site, and it is a way to add a more challenging element to the site.
+#### Profile page
+More custom features on the profile page, such as profile picture and "About me" information such as "Favourite cuisine" or "Number of reviews", they could earn rewards for reaching certain levels of reviews, e.g 25 reviews = Bronze medal, 50 reviews = Silver medal, 100 reviews = Gold medal. Also being able to then search for other users profiles to view this information.
 
-#### Themed levels
-Each game level could have a different theme, grouping animals together, e.g jungle, underwater, farm etc.
+---
+## Database Schema 
+
+lofndaijgnlbnrw dksblmks
+
+## Technologies used
+
+### Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) - a markup language used for presenting and structuring content.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - stylesheet language for adding style.
+- [Python3](https://en.wikipedia.org/wiki/Python_(programming_language) - a high-level, general-purpose programming language.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - language used to created dynamic and interactive programmes
+
+### Programs and websites
+- [GitHub](https://github.com/) - to host the repository, and then deploy to GitHub pages.
+- [GitPod](https://gitpod.io) - to write the code and use GIT to commit and push to GitHub.
+- [Balsamiq](https://balsamiq.com/) - used to produce the wireframes.
+- [Coolors](https://coolors.co/) - used to create a colour palette for the website.
+- [Techsini](https://techsini.com/multi-mockup/index.php) - used to create the multi device mockup.
+- [W3C HTML Validation service](https://validator.w3.org/) - used to validate HTML
+- [W3C Jigsaw CSS Validation service](https://jigsaw.w3.org/css-validator/) - used to validate CSS
+- [JS Lint](https://www.jslint.com) and [JSHint](https://jshint.com/) - used to check the JS
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - for performance testing.
+- [Wave](https://wave.webaim.org/) - for accessibility testing.
+- [Chrome developer tools](https://developer.chrome.com/docs/devtools/) - for testing responsiveness throughout.
+
+### Frameworks and Libraries 
+- [Bootstrap](https://getbootstrap.com/) - version 5.2 was used for the homepage and the fact page. Bootstrap documentation was used specifically for the rules modal within the homepage, and aided with repsonsiveness on these pages. 
+- [Google Fonts](https://fonts.google.com/) - Selected a variety of fonts and imported these into the code. 
+- [Image resizer](https://imageresizer.com/) - Used to resize all fact card images to be equal in size.
 
 ---

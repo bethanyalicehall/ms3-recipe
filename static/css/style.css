@@ -98,7 +98,7 @@ h5 {
 }
 
 .register-link {
-  color: #fc4445 !important;
+  font-weight: bold;
 }
 
 /* Icons*/
@@ -138,7 +138,7 @@ i {
 
 .collapsible-body {
   background-color: #F19090;
-  color: white;
+  color: black;
 }
 
 data-tooltip {

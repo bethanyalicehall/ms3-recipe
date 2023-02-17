@@ -28,7 +28,7 @@
         <nav class="nav-extended text-shadow" id="navbar">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_review') }}" class="brand-logo left">Fan of Scran</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right" aria-label="Mobile sidenav"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_review') }}">Home</a></li>
                     {% if session.user %}
