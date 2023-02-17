@@ -6,22 +6,6 @@
 <h5 class="center">
     All of the restaurant reviews you have made so far
 </h5>
-    
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <div class="row center-align">
-          <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="static/img/indian.jpg" alt="diner"img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
-  </div>
 
 <ul class="collapsible">
     {% for review in reviews %}
