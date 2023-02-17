@@ -12,42 +12,29 @@ I inputted code into the W3C validation service and no errors were found
 
 ## JS validator
 
-I used [JS Lint](https://www.jslint.com) to review my JavaScript code.
-- The first error which appeared quite a bit through my code was the use of single quotes instead of double quotes, so I changed those.
-- I had missed off a few semi-colons at the end of and within functions - i corrected these.
-Some warnings which I did not act upon in this instance, as they did not directly impact the functioning of the website or cause any console errors. However I will make a note of these for my learning going forward
-- A few errors came up that certain lines were longer than 80 characters
-- Advice to use function rather than => when there are longer functions
+I used [JSHint](https://jshint.com/).
+This gave some information of the following metrics, warnings and undefined variables. The undefined variable is the $ sign, this was due to the use of JQuery. The warnings do not directly impact the functioning of the site or cause a console error.
 
-I also put my code through [JSHint](https://jshint.com/).
-This gave some information of the following metrics.
+![Screenshot of metrics from JSHint](static/img/README/jshint.png)
 
-![Screenshot of metrics from JSHint](readme-img/metrics.png)
+## PEP8 Compliant 
+I ensured that my Python code was PEP8 compliant, I corrected any linting errors within the IDE. I referred to [this site](https://peps.python.org/pep-0008/) to check some rules regarding indentation.
 
-This brought up some warnings however again as they did not directly impact the functioning of the site or cause a console error, I will take forward these points in my learning.
-
-![Warning 1](readme-img/warning1.png)
-![Warning 2](readme-img/warning2.png)
-![Warning 3](readme-img/warning3.png)
-![Warning 4](readme-img/warning4.png)
-
-
+INSERT SCREENSHOTS OF LINTING ERRORS
 
 ## Performance testing
 I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) performance testing software.
-- The results of the lighthouse testing can be seen below for each page. 
+- The results of the lighthouse testing can be seen below. 
 
 ### Home page
-![Screenshot of Lighthouse testing for home page](readme-img/index-1.png)
+![Screenshot of Lighthouse testing for home page](static/img/README/lighthouse1.png)
 
-### Level 1 page
-![Screenshot of Lighthouse testing for routes page](readme-img/level1-1.png)
+### Profile page
+![Screenshot of Lighthouse testing for profile page](static/img/README/lighthouse2.png)
 
-### Level 2 page
-![Screenshot of Lighthouse testing for routes page](readme-img/level2-1.png)
+### Add a review page
+![Screenshot of Lighthouse testing for add review page](static/img/README/lighthouse3.png)
 
-### Fun Facts page
-![Screenshot of Lighthouse testing for get in touch page](readme-img/facts-1.png)
 
 ## Accessibility testing
 I utilised [Wave](https://wave.webaim.org/) which is a web accessibility evaluation tool.
