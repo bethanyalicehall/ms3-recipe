@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website to browse and add restaurant reviews">
+     <meta name="keywords" content="food, restaurant, restaurants, reviews">
+    <meta name="author" content="Bethany Hall">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
@@ -32,7 +35,7 @@
                     <li><a href="{{ url_for('all_reviews') }}">Reviews</a></li>
                     <li><a href="{{ url_for('get_cuisines') }}">Cuisines</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}"> My Reviews</a></li>
-                    <li><a href="{{ url_for('add_review') }}">New Review</a></li>
+                    <li><a href="{{ url_for('add_review') }}">+ review</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
