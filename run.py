@@ -7,6 +7,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+from datetime import datetime
 
 
 app = Flask(__name__)
@@ -21,13 +22,13 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_review")
 def get_review():
-    reviews = list(mongo.db.review.find().sort("date_visited", 1).limit(3))
+    reviews = list(mongo.db.review.find().sort("_id", -1).limit(3))
     return render_template("review.html", reviews=reviews)
 
 
 @app.route("/all_reviews")
 def all_reviews():
-    reviews = list(mongo.db.review.find().sort("date_visited", 1))
+    reviews = list(mongo.db.review.find().sort("_id", -1))
     return render_template("all_reviews.html", reviews=reviews)
 
 
@@ -98,7 +99,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        reviews = list(mongo.db.review.find().sort("date_visited", 1))
+        reviews = list(mongo.db.review.find().sort("_id", -1))
         return render_template("profile.html", username=username,
                                reviews=reviews)
     return redirect(url_for("login"))
@@ -182,7 +183,7 @@ def get_cuisines():
 @app.route("/get_specific_cuisines/<cuisine_name>")
 def get_specific_cuisines(cuisine_name):
     reviews = list(mongo.db.review.find
-                   ({'cuisine_name': cuisine_name}).sort("date_visited", -1))
+                   ({'cuisine_name': cuisine_name}).sort("_id", -1))
     return render_template("specific_cuisine.html", reviews=reviews,
                            cuisine_name=cuisine_name)
 

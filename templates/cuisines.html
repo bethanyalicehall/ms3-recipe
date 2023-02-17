@@ -9,23 +9,23 @@
             <a href="{{ url_for('get_specific_cuisines', cuisine_name=cuisine.cuisine_name) }}">
             <div class="card-image">
                 {% if cuisine.cuisine_name == "British" %}
-                <img src="static/img/british.jpg">
+                <img src="static/img/british.jpg" alt="Typical british cuisine, roast dinner">
                 {% elif cuisine.cuisine_name == "Chinese" %}
-                <img src="static/img/chinese.jpg">
+                <img src="static/img/chinese.jpg" alt="Typical chinese cuisine, noodles">
                 {% elif cuisine.cuisine_name == "French" %}
-                <img src="static/img/french.jpg">
+                <img src="static/img/french.jpg" alt="Typical french cuisine, cheese and wine">
                 {% elif cuisine.cuisine_name == "Greek" %}
-                <img src="static/img/greek.jpg">
+                <img src="static/img/greek.jpg" alt="Typical greek cuisine, feta and tomato salad">
                 {% elif cuisine.cuisine_name == "Indian" %}
-                <img src="static/img/indian.jpg">
+                <img src="static/img/indian.jpg" alt="Typical indian cuisine, dhal and rice">
                 {% elif cuisine.cuisine_name == "Italian" %}
-                <img src="static/img/italian.jpg">
+                <img src="static/img/italian.jpg" alt="Typical italian cuisine, margherita pizza">
                 {% elif cuisine.cuisine_name == "Mexican" %}
-                <img src="static/img/mexican.jpg">
+                <img src="static/img/mexican.jpg" alt="Typical mexican cuisine, tacos and a margarita">
                 {% elif cuisine.cuisine_name == "Spanish" %}
-                <img src="static/img/spanish.jpg">
+                <img src="static/img/spanish.jpg" alt="Typical spanish cuisine, tapas">
                 {% else %}
-                <img src="static/img/other.jpg">
+                <img src="static/img/other.jpg" alt="Example of another cuisine, sushi">
                 {% endif %}
                 
             </a>

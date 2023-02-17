@@ -4,46 +4,40 @@
 <h3 class="header center ">Feeling Hungry?</h3>
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        
-
-        
-        <div class="row center-align">
-          <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
+        <div class="container">
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <div class="row center-align">
+                <a href="{{ url_for('add_review') }}" class="btn btn-large waves-effect waves-light">Add a review</a>
+            </div>
+            <div class="row center">
+                <a href="{{ url_for('all_reviews') }}" class="btn btn-large waves-effect waves-light">Browse all
+                    reviews</a>
+            </div>
         </div>
-        
-
-        <div class="row center">
-            <a href="{{ url_for('all_reviews') }}" class="btn btn-large waves-effect waves-light">Browse all reviews</a>
-          </div>
-
-        
-        
-
-      </div>
     </div>
-    <div class="parallax"><img src="static/img/diner.png" alt=""img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
-  </div>
+    <div class="parallax"><img src="static/img/diner.png" alt="Restaurant ables within an american style diner" img
+            style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
+</div>
 {% else %}
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
-        
-        <h1 class="header center" id="h1-hungry">Feeling Hungry?</h1>
-        <div class="row center">
-          <a href="{{ url_for('register') }}" class="btn btn-large waves-effect waves-light">Register now</a>
-        </div>
-        <br><br>
+        <div class="container">
 
-      </div>
+            <h1 class="header center" id="h1-hungry">Feeling Hungry?</h1>
+            <div class="row center">
+                <a href="{{ url_for('register') }}" class="btn btn-large waves-effect waves-light">Register now</a>
+            </div>
+            <br><br>
+
+        </div>
     </div>
-    <div class="parallax"><img src="static/img/home-diner.png" alt=""img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
-  </div>
+    <div class="parallax"><img src="static/img/home-diner.png" alt="A neon lit american style diner" img
+            style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
+</div>
 
 <div class="row">
 
@@ -54,60 +48,55 @@
     </div>
     <div class="col s6">
         <h2 class="center"><i class="fas fa-ice-cream"></i></h2>
-      <h5 class="center">Sign up for a free account</h5>
-      <p class="light">Share your best and worst restaurant experiences with family, friends, and the world. Click <a href="{{ url_for('register') }}">here</a> to sign up now</p>
+        <h5 class="center">Sign up for a free account</h5>
+        <p class="light">Share your best and worst restaurant experiences with family, friends, and the world. Click <a
+                href="{{ url_for('register') }}">here</a> to sign up now</p>
     </div>
-   
 
-  </div>
+
+</div>
 {% endif %}
 
 <h4 class="header">Latest reviews</h3>
 
-<ul class="collapsible">
-    {% for review in reviews %}
-    <li>
-        <div class="collapsible-header">
-            <i class="fas fa-angle-down"></i>
-            <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
-            {% if review.overall_rating == "Poor" %}
-                <i class="fas fa-face-frown  tooltipped right"
-                data-position="right" data-tooltip="Poor"></i>
+    <ul class="collapsible">
+        {% for review in reviews %}
+        <li>
+            <div class="collapsible-header">
+                <i class="fas fa-angle-down"></i>
+                <strong>{{ review.restaurant_name }}</strong>: {{ review.restaurant_location }}
+                {% if review.overall_rating == "Poor" %}
+                <i class="fas fa-face-frown  tooltipped right" data-position="right" data-tooltip="Poor"></i>
                 {% elif review.overall_rating == "Average" %}
-                <i class="fas fa-face-meh  tooltipped right"
-                    data-position="right" data-tooltip="Average"></i>
+                <i class="fas fa-face-meh  tooltipped right" data-position="right" data-tooltip="Average"></i>
                 {% elif review.overall_rating == "Good" %}
-                <i class="fas fa-face-smile  tooltipped right"
-                    data-position="right" data-tooltip="Good"></i>
+                <i class="fas fa-face-smile  tooltipped right" data-position="right" data-tooltip="Good"></i>
                 {% else %}
-                <i class="fas fa-face-grin-hearts  tooltipped right"
-                    data-position="right" data-tooltip="Excellent"></i>
-            {% endif %}
-        </div>
-        <div class="collapsible-body">
-            <strong>{{ review.date_visited }}</strong><br>
-            <p>Cuisine: {{ review.cuisine_name }}</p>
-            <p>Starter: {{ review.starter_description }}</p>
-            <p>Main: {{ review.main_description }}</p>
-            <p>Dessert: {{ review.dessert_description }}</p>
-            <p>Drink: {{ review.drink_description }}</p>
-            <p>Rating: {{ review.overall_rating}}</p>
-            <p>Comments: {{ review.overall_comments}}</p>
-            <p><em>Review by: {{ review.created_by }}</em></p>
-            <div class="col s3">
-                {% if session.user|lower == review.created_by|lower %}
-                <a href="{{ url_for('edit_review', review_id=review._id) }}"
-                    class="btn ">Edit</a>
+                <i class="fas fa-face-grin-hearts  tooltipped right" data-position="right" data-tooltip="Excellent"></i>
+                {% endif %}
+            </div>
+            <div class="collapsible-body">
+                <strong>Visited on {{ review.date_visited }}</strong><br>
+                <p>Cuisine: {{ review.cuisine_name }}</p>
+                <p>Starter: {{ review.starter_description }}</p>
+                <p>Main: {{ review.main_description }}</p>
+                <p>Dessert: {{ review.dessert_description }}</p>
+                <p>Drink: {{ review.drink_description }}</p>
+                <p>Rating: {{ review.overall_rating}}</p>
+                <p>Comments: {{ review.overall_comments}}</p>
+                <p><em>Review by: {{ review.created_by }}</em></p>
+                <div class="col s3">
+                    {% if session.user|lower == review.created_by|lower %}
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn ">Edit</a>
 
-                    <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
+                    <button data-target="{{ review._id }}" class=" btn modal-trigger">Delete </button>
                     <!-- Modal Structure -->
                     <div id="{{ review._id}}" class="modal">
                         <div class="modal-content">
                             <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                                class="modal-close btn">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}" class="modal-close btn">
                                 Delete
                             </a>
                             <a href="{{ url_for('get_review') }}" class="modal-close btn">
@@ -115,28 +104,27 @@
                             </a>
                         </div>
                     </div>
-                {% elif session.user|lower == "admin" %}
-                <button data-target="{{ review._id }}" class=" btn modal-trigger" >Delete </button>
-                <!-- Modal Structure -->
-                <div id="{{ review._id}}" class="modal">
-                    <div class="modal-content">
-                        <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                    {% elif session.user|lower == "admin" %}
+                    <button data-target="{{ review._id }}" class=" btn modal-trigger">Delete </button>
+                    <!-- Modal Structure -->
+                    <div id="{{ review._id}}" class="modal">
+                        <div class="modal-content">
+                            <h4>Are you sure you want to delete '{{ review.review_name }}'?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}" class="modal-close btn">
+                                Delete
+                            </a>
+                            <a href="{{ url_for('get_review') }}" class="modal-close btn">
+                                Cancel
+                            </a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                            class="modal-close btn">
-                            Delete
-                        </a>
-                        <a href="{{ url_for('get_review') }}" class="modal-close btn">
-                            Cancel
-                        </a>
-                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
             </div>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+        </li>
+        {% endfor %}
+    </ul>
 
-{% endblock %}
+    {% endblock %}

@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="static/img/table.png" alt="diner"img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
+    <div class="parallax"><img src="static/img/table.png" alt="A typical red and white diner booth"img style="transform: translate3d(-50%, 225.01px, 0px); opacity: 1;"></div>
   </div>
 
   <div class="row card-panel" id="search-card">
@@ -70,7 +70,7 @@
         {% endif %}
         </div>
         <div class="collapsible-body">
-            <strong>{{ review.date_visited }}</strong><br>
+            <strong>Visited on {{ review.date_visited }}</strong><br>
             <p>Cuisine: {{ review.cuisine_name }}</p>
             <p>Starter: {{ review.starter_description }}</p>
             <p>Main: {{ review.main_description }}</p>
