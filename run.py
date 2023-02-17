@@ -21,13 +21,13 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_review")
 def get_review():
-    reviews = list(mongo.db.review.find().sort("date_visited", -1).limit(3))
+    reviews = list(mongo.db.review.find().sort("date_visited", 1).limit(3))
     return render_template("review.html", reviews=reviews)
 
 
 @app.route("/all_reviews")
 def all_reviews():
-    reviews = list(mongo.db.review.find().sort("date_visited", -1))
+    reviews = list(mongo.db.review.find().sort("date_visited", 1))
     return render_template("all_reviews.html", reviews=reviews)
 
 
@@ -98,7 +98,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        reviews = list(mongo.db.review.find().sort("date_visited", -1))
+        reviews = list(mongo.db.review.find().sort("date_visited", 1))
         return render_template("profile.html", username=username,
                                reviews=reviews)
     return redirect(url_for("login"))
