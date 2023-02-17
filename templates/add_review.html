@@ -22,8 +22,8 @@
                     {% for cuisine in cuisines %}
                     <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
                     {% endfor %}
+                    <label for="cuisine_name">Cuisine name</label>
                 </select>
-                <label for="cuisine_name">Cuisine name</label>
             </div>
         </div>
         <div class="row">
@@ -89,8 +89,8 @@
                     {% for rating in ratings %}
                     <option value="{{ rating.overall_rating }}">{{ rating.overall_rating }}</option>
                     {% endfor %}
+                    <label for="overall_rating">Rating</label>
                 </select>
-                <label for="overall_rating">Rating</label>
             </div>
         </div>
         <!-- Submit button -->
