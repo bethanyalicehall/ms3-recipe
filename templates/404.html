@@ -14,12 +14,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">        
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>Error!</title>
+    <title>Page not found</title>
 </head>
 
 <body>
-<h1>Whoops! Looks like you've got lost</h1>
-<a href="{{ url_for('get_review') }}">Click here to go back home</a>
+<h1 class="center">Whoops! This page could not be found</h1>
+<h4>
+    <a href="{{ url_for('get_review') }}">Click here to go back home</a>
+</h4>
 </body>
 
 </html>
