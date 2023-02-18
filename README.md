@@ -118,13 +118,10 @@ Users who are logged in
 
 The original wireframes differ slightly to the final layout of the website, this is because as I was developing the site naturally some changes occurred that seemed logical to improve UX.
 
-![Desktop wireframe for home page](static/img/README/desktop-home.png)
-![Desktop wireframe for review page](static/img/README/desktop-review.png)
-![Desktop wireframe for add a review page](static/img/README/desktop-add.png)
+![wireframeS for home page](static/img/README/wf-home.png)
+![wireframeS for home page](static/img/README/wf-add.png)
+![wireframeS for home page](static/img/README/wf-reviews.png)
 
-![Mobile wireframe for home page](static/img/README/mobile-home.png)
-![Mobile wireframe for review page](static/img/README/mobile-review.png)
-![Mobile wireframe for add a review page](static/img/README/mobile-add.png)
 
 
 Changes made throughout development
