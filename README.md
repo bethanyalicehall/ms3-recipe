@@ -207,7 +207,7 @@ The footer contains the brand logo, brief information about the site, copyright 
 ### Accessibility
 - Alt attributes have been added to all images 
 - Text size, font and colour were considered in a way to hopefully provide clear, easy reading.
-- Wave was used to carry out testing which looked at accessibility, see [Testing](#testing) section. 
+- The Lighthouse report looks at accessibility, see [Testing](#testing) section for more information. 
 
 ### Meta data
 Meta tags are included within the head element, including a description, the author and keywords, to improve search engine optimisation. 
@@ -235,7 +235,9 @@ More custom features on the profile page, such as profile picture and "About me"
 ---
 ## Database Schema 
 
-lofndaijgnlbnrw dksblmks
+I used dbdiagram to create a visualisation of my database schema
+![Database schema]()
+
 
 ---
 
@@ -251,6 +253,7 @@ lofndaijgnlbnrw dksblmks
 - [GitHub](https://github.com/) - to host the repository, and then deploy to GitHub pages.
 - [GitPod](https://gitpod.io) - to write the code and use GIT to commit and push to GitHub.
 - [Heroku]() - 
+- [MongoDB Atlas]() - 
 - [Balsamiq](https://balsamiq.com/) - used to produce the wireframes.
 - [Coolors](https://coolors.co/) - used to create a colour palette for the website.
 - [Techsini](https://techsini.com/multi-mockup/index.php) - used to create the multi device mockup.
