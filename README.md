@@ -118,15 +118,14 @@ Users who are logged in
 
 The original wireframes differ slightly to the final layout of the website, this is because as I was developing the site naturally some changes occurred that seemed logical to improve UX.
 
-<img align="left"  src="" alt="Wireframe">
+![Desktop wireframe for home page](static/img/README/desktop-home.png)
+![Desktop wireframe for review page](static/img/README/desktop-review.png)
+![Desktop wireframe for add a review page](static/img/README/desktop-add.png)
 
+![Mobile wireframe for home page](static/img/README/mobile-home.png)
+![Mobile wireframe for review page](static/img/README/mobile-review.png)
+![Mobile wireframe for add a review page](static/img/README/mobile-add.png)
 
-<img align="right"  src="" alt="Wireframe">
-
-
-<img align="left"  src="" alt="Wireframe">
-
-<br clear="both"/>
 
 Changes made throughout development
 - Added in a cuisine page, and the link to this on the navigation bar
@@ -241,17 +240,20 @@ More custom features on the profile page, such as profile picture and "About me"
 
 lofndaijgnlbnrw dksblmks
 
+---
+
 ## Technologies used
 
 ### Languages
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) - a markup language used for presenting and structuring content.
 - [CSS3](https://en.wikipedia.org/wiki/CSS) - stylesheet language for adding style.
-- [Python3](https://en.wikipedia.org/wiki/Python_(programming_language) - a high-level, general-purpose programming language.
+- [Python3](https://www.python.org/) - a high-level, general-purpose programming language.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - language used to created dynamic and interactive programmes
 
 ### Programs and websites
 - [GitHub](https://github.com/) - to host the repository, and then deploy to GitHub pages.
 - [GitPod](https://gitpod.io) - to write the code and use GIT to commit and push to GitHub.
+- [Heroku]() - 
 - [Balsamiq](https://balsamiq.com/) - used to produce the wireframes.
 - [Coolors](https://coolors.co/) - used to create a colour palette for the website.
 - [Techsini](https://techsini.com/multi-mockup/index.php) - used to create the multi device mockup.

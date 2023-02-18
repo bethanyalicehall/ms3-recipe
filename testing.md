@@ -20,7 +20,11 @@ This gave some information of the following metrics, warnings and undefined vari
 ## PEP8 Compliant 
 I ensured that my Python code was PEP8 compliant, I corrected any linting errors within the IDE. I referred to [this site](https://peps.python.org/pep-0008/) to check some rules regarding indentation.
 
-INSERT SCREENSHOTS OF LINTING ERRORS
+Below are some screenshots of linting errors, mainly due to indentation errors.
+
+![Screenshot of linting errors within the IDE](static/img/README/linting1.png)
+![Screenshot of linting errors within the IDE](static/img/README/linting2.png)
+![Screenshot of linting errors within the IDE](static/img/README/linting3.png)
 
 ## Performance testing
 I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) performance testing software.
@@ -36,13 +40,6 @@ I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overvie
 ![Screenshot of Lighthouse testing for add review page](static/img/README/lighthouse3.png)
 
 
-## Accessibility testing
-I utilised [Wave](https://wave.webaim.org/) which is a web accessibility evaluation tool.
-
-- One error was dected, there was a paragraph, that the tool detected as looking like a heading so I changed that to an h2 element, from a paragraph element.
-- Some contrast errors were picked up on the buttons on the level 1 and 2 pages, I changed the text from an ivory colour to a dark green colour.
-- Some contrast errors were also acknowledged in the facts page, however they did still pass teh large text test and the text was large so it was ok.
-
 ## Responsiveness
 - I utilised Chrome Developer tools to test responsiveness on different devices, the following devices were sucesfully tested through this.
     - iPhone SE
@@ -54,8 +51,7 @@ I utilised [Wave](https://wave.webaim.org/) which is a web accessibility evaluat
     - Galaxy Fold
     - Nest Hub
 
-- I manually tested the website on an iPhone 12 pro, an iPad 2 and a MacBook Air.
-
+- I tested the website on an iPhone 12 pro, an iPad 2 and a MacBook Air.
 
 ## Manual testing
 
@@ -65,8 +61,8 @@ I utilised [Wave](https://wave.webaim.org/) which is a web accessibility evaluat
 
 | Page | Element and expected action | Pass or Fail | 
 | ----------- | ----------- | ----------- |
-| All pages | There is a multi-toned green background | Pass |
-| All Pages | When hovering over a link the pointer changes and there is a colour change to indicate interactivity | Pass |
+| All pages | There is a navigation bar displaying the logo "Fan of Scran" and navigation links, which all take you to the relevant page | Pass |
+| All Pages | When hovering over a link the pointer changes | Pass |
 | Home page | url linked in README.md displays Creature Corner homepage, and the frog Favicon is visbile | Pass |
 | Home page | There is a main title and a subtitle, giving more information about purpose of site | Pass |
 | Home page | The Play link takes you to level 1 of the memory game | Pass |
