@@ -52,10 +52,11 @@ User experience
 
 ### **As the site owner I want ...**
 - To be able to login with an admin account and delete any reviews incase they are inappropriate or offensive
-- To attract new users and retain existing users to create a site with more reviews 
 - Provide 404 and 500 error pages to redirect users back to the homepage
 - Any external links (e.g. to our social media sites) to open in a new tab
 - Provide a secure registration/login for users
+- To attract new users and retain existing users to create a site with more reviews 
+
 
 ---
 
@@ -275,5 +276,41 @@ More custom features on the profile page, such as profile picture and "About me"
 - [Google Fonts](https://fonts.google.com/) - used to import fonts. 
 - [Font Awesome](https://fontawesome.com/) - for icons throughout the site.
 - [Image resizer](https://imageresizer.com/) - used to resize all cuisine card images to be equal in size.
+
+---
+
+## Testing 
+Click [here](testing.md) to view all testing carried out.
+
+---
+
+## Deployment
+
+### Steps taken to deploy project to GitHub Pages
+1. Go to **My repositories**.
+2. Select **bethanyalicehall/memory-final**.
+3. At the top of the page click on **Settings**.
+4. Scroll down and on the left hand side there is a **Pages** section.
+5. Under **Source** click the drop down menu and select **Main**.
+6. Click **Save**, the website will now be deployed (note it can take a minute or two to load).
+
+### Access to code
+1. Go to **My repositories**.
+2. Select **bethanyalicehall/memory-final**.
+3. At the top of the page click on **Code**, where **Zip files** can be downloaded locally.
+
+---
+
+## Credits 
+
+### Media
+
+
+### Content
+
+  
+
+### Acknowledgements
+
 
 ---
