@@ -123,15 +123,17 @@ The following browsers were used to check compatibility with the website
 ## Testing User Stories
 
 ### As a new user I want ...
-- A fun, colourful, quick game
-    - Obviously 'fun' is subjective however friends and family who have tested it have enjoyed it, and I have had fun playing it myself! THe game is colourful, with a green and blue theme throughout and bright coloured cartoon emojis.
+- To understand what the sites purpose is immediatley.
+    - The imagery, the site name and the heading all indicate the website is about food/restaurants. On Further reading it is clear the site is a restaurant review site. 
 
-![Screenshot of game board](readme-img/full-game-board.png)
+![Screenshot of home page](static/img/README/user-homepage.png)
 
-- To learn how to play quickly, with straightforward, clear rules
-    - Easily accessible rules from the home page, that are concise and logical.
+- To be able to navigate to and use the registration page easily.
+    - From the initial home page there are three opportunities for a user to sign up and access the registration page
 
-![Screenshot of rules](readme-img/rules.png)
+![Screenshot of opportunity to sign up](static/img/README/user-signup1.png)
+![Screenshot of opportunity to sign up](static/img/README/user-signup2.png)
+![Screenshot of opportunity to sign up](static/img/README/user-signup3.png)
 
 - To learn interesting facts about a wide range of animals.
     - There are 12 different animals on the facts page from all over the world and from different habitats. Each fact is fun and a bit unusual which makes that animal quite unique.
