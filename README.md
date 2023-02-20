@@ -48,7 +48,7 @@ User experience
 - To be able to view my own restaurant reviews in order of when I made them.
 - To edit and delete my own reviews.
 - To search reviews by restaurant name, location, and user.
-- To see most the latest reviews on the home page.
+- To see the latest reviews on the home page.
 
 ### **As the site owner I want ...**
 - To be able to login with an admin account and delete any reviews incase they are inappropriate or offensive

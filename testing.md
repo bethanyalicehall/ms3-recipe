@@ -129,29 +129,45 @@ The following browsers were used to check compatibility with the website
 ![Screenshot of home page](static/img/README/user-homepage.png)
 
 - To be able to navigate to and use the registration page easily.
-    - From the initial home page there are three opportunities for a user to sign up and access the registration page
+    - From the initial home page there are three opportunities for a user to sign up and access the registration page. The registration page itself is straightforward and clear.
 
 ![Screenshot of opportunity to sign up](static/img/README/user-signup1.png)
 ![Screenshot of opportunity to sign up](static/img/README/user-signup2.png)
 ![Screenshot of opportunity to sign up](static/img/README/user-signup3.png)
+![Screenshot of registration page](static/img/README/user-register.png)
 
-- To learn interesting facts about a wide range of animals.
-    - There are 12 different animals on the facts page from all over the world and from different habitats. Each fact is fun and a bit unusual which makes that animal quite unique.
+- To easily navigate the site once logged in and start adding reviews.
+    - The navigation bar present once logged in is clear, and there are also opportunities when on other pages of the site to add reviews. 
 
-![Screenshot of facts](readme-img/user-facts.png)
-
+![Screenshot of navigation bar](static/img/README/user-nav.png)
+![Screenshot of navigation bar](static/img/README/user-add1.png)
+![Screenshot of navigation bar](static/img/README/user-add2.png)
 
 ### As a returning user I want ...
-- The game to change each time so that there is a new order of cards each time.
-    - The game has lots of possibilities, there are 18 pairs of animal emojis which can be featured in the game, and within JavaScript Math.random was used to allow a different selection from the array of emojis to be used each time, so that the pairs locations and animals change each game.
+- To be able to view my own restaurant reviews in order of when I made them.
+    - The profile page only displays reviews made by the user currently logged in and displays in order of most recently created.
 
-![Screenshot of game](readme-img/game-one.png)
-![Screenshot of game](readme-img/game-two.png)
+![Screenshot of profile page](static/img/README/user-profile.png)
 
-- To be able to see my stats while playing the game, so I can challenge myself each time
-    - The game stats are available during the game and also once you have finished they will be displayed.
+- To edit and delete my own reviews.
+    - A user is able to edit and delete their own reviews from any page where they can view reviews - home page, reviews page, cuisine page, and profile page. A user cannot edit or delete anothers reviews. The admin account can delete other reviews. As you can see below, when logged in as 'Bethany', I cannot edit or delete a review made by admin.
 
-![Screenshot of game](readme-img/stats.png)
+![Screenshot of edit and delete options for users own review](static/img/README/user-own.png)
+![Screenshot of edit and delete options for another user review](static/img/README/user-notown.png)
+
+
+- To search reviews by restaurant name, location, and user.
+    - Below are some screenshots of searches for "Red", "Newcastle", and "Excellent"
+
+![Screenshot of search for "Red"](static/img/README/user-search.png)
+![Screenshot of search for "Newcastle"](static/img/README/user-search2.png)
+![Screenshot of search for "Excellent"](static/img/README/user-search3.png)
+
+
+- To see the latest reviews on the home page.
+    - The home page displays the three latest reviews created.
+
+![Screenshot of latest reviews](static/img/README/user-latest.png)
 
 
 ### As the website owner I want ...
