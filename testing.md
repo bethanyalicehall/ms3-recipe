@@ -171,12 +171,24 @@ The following browsers were used to check compatibility with the website
 
 
 ### As the website owner I want ...
-- To create a game that both children and adults can enjoy
-    - Friends and family aged 12-55 tried out the game and had fun.
+- To be able to login with an admin account and delete any reviews incase they are inappropriate or offensive
+    - Below is a screenshot demonstrating the ability of an admin to delete any reviews, they cannot edit reviews of other users.
 
-- To increase visits to the website, and gain returning users.
-    - As this is just a concept and not a properly published game site, this cannot be measured. However friends and family said they will be playing again and showing their friends too.
+![Screenshot of admin ability to delete other user reviews](static/img/README/user-admin.png)
+    
+- Provide 404 error page to redirect users back to the homepage
 
+![Screenshot of admin ability to delete other user reviews](static/img/README/user-404.png)
+
+- Any external links (e.g. to our social media sites) to open in a new tab
+    - target="_blank" was added to each social media link so they open in a new tab
+
+- Provide a secure registration/login for users
+    - The passwords are stored within the database as a hash so are secure
+    - Users cannot type in /profile/"username" to access another users profile
+
+- To attract new users and retain existing users to create a site with more reviews 
+    - As this is just a concept and not a properly published game site, this cannot be measured. However friends and family said they like the idea and would use it.
 
 ### Feedback from friends and family
 I shared this project with a few family members and friends, some feedback I receieved -
