@@ -190,16 +190,6 @@ The following browsers were used to check compatibility with the website
 - To attract new users and retain existing users to create a site with more reviews 
     - As this is just a concept and not a properly published game site, this cannot be measured. However friends and family said they like the idea and would use it.
 
-### Feedback from friends and family
-I shared this project with a few family members and friends, some feedback I receieved -
-"I think the game is great, simple but still fun"
-"One thing you could add would be something to alert the user that their cards match - such as a colour change to the cards that have matched"
-"I think the colours and the font tie in well to the overall theme"
-
 ## Identified bugs
-- Bug: When the screen size became smaller on certain devices, the emojis were positioned wrong on the cards and splilled over the edge of them.
-    - How I fixed it: I altered the line height of the emoji and put this style into a media query for those specific screen sizes.
-- Bug: On smaller devices the winning text message was all mis-aligned. 
-    - How I ficed it: I removed the padding on the buttons for screen sizes below 800px
-- Bug: Initially I had a 6x6 grid for level 2, however this was spilling off the screen and I did not want to make the user have to scroll to see the full game board
-    - How I fixed it: I had initally implemented a rule in my code to only allow even numbers of columns however I removed this and created a 5x grid which fit much better on the screen.
+- Bug:
+    - How I fixed it: 
