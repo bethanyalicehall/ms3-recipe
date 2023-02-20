@@ -341,7 +341,7 @@ Click [here](media-sources.md) to see details of images used.
 ### Content
 - [Code institute boiler template](https://github.com/Code-Institute-Org/gitpod-full-template) was used.
 - [Materialize](https://materializecss.com/) was used for the navigation bar, footer, cards, forms and image containers, these were then styled in a different way.
-- I found the walkthrough project for the non-relational database on [Code Institute](https://codeinstitute.net/) very helpful to refer to throughout the building of this site, and some code was used from this such as the Login and Registration functions. 
+- I found the walkthrough project for the non-relational database on [Code Institute](https://codeinstitute.net/) very helpful to refer to throughout the building of this site. Some code was used from this and changed slightly to suit my project, such as the Login/Registration functions and some other components on the site. 
 
   
 ### Acknowledgements
