@@ -19,6 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# To load home page
 @app.route("/")
 @app.route("/get_review")
 def get_review():
@@ -26,12 +27,14 @@ def get_review():
     return render_template("review.html", reviews=reviews)
 
 
+# To load page displaying all reviews
 @app.route("/all_reviews")
 def all_reviews():
     reviews = list(mongo.db.review.find().sort("_id", -1))
     return render_template("all_reviews.html", reviews=reviews)
 
 
+# Function to search through reviews
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -39,10 +42,11 @@ def search():
     return render_template("all_reviews.html", reviews=reviews)
 
 
+# Function to register for the site
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username already exists in db
+        # To see if username already exists
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -56,13 +60,14 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
+        # Allocates user to cookie "session"
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
 
+# Function to login tp the site
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -92,6 +97,7 @@ def login():
     return render_template("login.html")
 
 
+# To load the profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # get the session user's username from the database
@@ -105,14 +111,16 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Function to logout from the site
 @app.route("/logout")
 def logout():
-    # removes the user from the session cookie
+    # Removes the user from the cookie "session"
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
+# Function to add a new review
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
@@ -139,6 +147,7 @@ def add_review():
                            ratings=ratings)
 
 
+# Function to edit a review
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
@@ -167,6 +176,7 @@ def edit_review(review_id):
         cuisines=cuisines, ratings=ratings)
 
 
+# Function to delete a review from the site
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
     mongo.db.review.remove({"_id": ObjectId(review_id)})
@@ -174,12 +184,14 @@ def delete_review(review_id):
     return redirect(url_for("get_review"))
 
 
+# To load the cuisine page
 @app.route("/get_cuisines")
 def get_cuisines():
     cuisines = list(mongo.db.cuisines.find().sort("initial_order", 1))
     return render_template("cuisines.html", cuisines=cuisines)
 
 
+# Function to logout from the site
 @app.route("/get_specific_cuisines/<cuisine_name>")
 def get_specific_cuisines(cuisine_name):
     reviews = list(mongo.db.review.find
@@ -188,19 +200,19 @@ def get_specific_cuisines(cuisine_name):
                            cuisine_name=cuisine_name)
 
 
+# To load 404 error page
 @app.errorhandler(404)
 def not_found(error):
     return render_template("404.html", error=error)
 
 
+# To load 500 error page
 @app.errorhandler(500)
 def internal_error(error):
     return render_template("500.html", error=error)
-
-# change debug to false below!
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
