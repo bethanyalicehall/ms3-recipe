@@ -241,7 +241,6 @@ More custom features on the profile page, such as profile picture and "About me"
 - I used [dbdiagram](https://dbdiagram.io/home) to create a visualisation of my database schema. The database is made up four collections. 
 ![Database schema](static/img/README/db-schema.png)
 
-
 ---
 
 ## Technologies used
@@ -253,23 +252,28 @@ More custom features on the profile page, such as profile picture and "About me"
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - language used to created dynamic and interactive programmes
 
 ### Programs and websites
-- [GitHub](https://github.com/) - to host the repository, and then deploy to GitHub pages.
+- [GitHub](https://github.com/) - to host the repository.
 - [GitPod](https://gitpod.io) - to write the code and use GIT to commit and push to GitHub.
-- [Heroku]() - 
-- [MongoDB Atlas]() - 
+- [Heroku](https://www.heroku.com/platform) - to deploy the project to a live site.
+- [MongoDB Atlas](https://www.mongodb.com/atlas/database) - used as the database platform.
 - [Balsamiq](https://balsamiq.com/) - used to produce the wireframes.
 - [Coolors](https://coolors.co/) - used to create a colour palette for the website.
+- [dbdiagram](https://dbdiagram.io/home) - used to create a diagram for the database schema.
 - [Techsini](https://techsini.com/multi-mockup/index.php) - used to create the multi device mockup.
 - [W3C HTML Validation service](https://validator.w3.org/) - used to validate HTML
 - [W3C Jigsaw CSS Validation service](https://jigsaw.w3.org/css-validator/) - used to validate CSS
-- [JS Lint](https://www.jslint.com) and [JSHint](https://jshint.com/) - used to check the JS
+- [JSHint](https://jshint.com/) - used to check the JS
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - for performance testing.
-- [Wave](https://wave.webaim.org/) - for accessibility testing.
 - [Chrome developer tools](https://developer.chrome.com/docs/devtools/) - for testing responsiveness throughout.
 
 ### Frameworks and Libraries 
-- [Bootstrap](https://getbootstrap.com/) - version 5.2 was used for the homepage and the fact page. Bootstrap documentation was used specifically for the rules modal within the homepage, and aided with repsonsiveness on these pages. 
-- [Google Fonts](https://fonts.google.com/) - Selected a variety of fonts and imported these into the code. 
-- [Image resizer](https://imageresizer.com/) - Used to resize all fact card images to be equal in size.
+- [Materialize](https://materializecss.com/) - version 1.0.0 was used throughout. Materialize documentation was used to create the basic design of the site and allow responsiveness on all devices.
+- [Flask](https://flask.palletsprojects.com/en/2.2.x/) - a python web framework.
+- [PyMongo](https://pymongo.readthedocs.io/en/stable/) - python tool to allow interaction with MongoDB.
+- [JQuery](https://jquery.com/) - for adding interactivity to components within the site.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.2.x/) - used for password security.
+- [Google Fonts](https://fonts.google.com/) - used to import fonts. 
+- [Font Awesome](https://fontawesome.com/) - for icons throughout the site.
+- [Image resizer](https://imageresizer.com/) - used to resize all cuisine card images to be equal in size.
 
 ---
