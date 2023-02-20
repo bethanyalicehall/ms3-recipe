@@ -64,12 +64,24 @@ I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overvie
 | All pages | There is a navigation bar displaying the logo "Fan of Scran" and navigation links, which all take you to the relevant page | Pass |
 | All Pages | When hovering over a link the pointer changes | Pass |
 | All Pages | There is a footer with social media links that all open in a new tab | Pass |
+| All Pages | The website is responsive on desktop, tablet and mobile | Pass |
 | Home page (Logged out) | url linked in README.md displays Fan of Scran homepage, and the Burger Favicon is visbile | Pass |
-| Home page | There is a main title and further information about purpose of site | Pass |
-| Home page | The register link takes you to the registration page | Pass |
-| Home page | The review accordian opens when clicked on and displays the review correctly | Pass |
-| Home page | Within the modal there are clear rules and a link to level 1 to start playing and a button to exit the modal | Pass |
-| Home page | The Animal facts link takes you to the facts page| Pass |
+| Home page (Logged out) | There is a main title and further information about purpose of site | Pass |
+| Home page (Logged out) | The register link takes you to the registration page | Pass |
+| Home page (Logged out + logged in)| The review accordian opens when clicked on and displays the review correctly | Pass |
+| Home page (Logged in) | The add a review link takes you to the new review page | Pass |
+| Home page (Logged in) | The browse reviews link takes you to the reviews page | Pass |
+| Login page | The login page works succesfully and only allows registered users to login | Pass |
+| Login page | The password is hidden | Pass |
+| Login page | The login button takes the user to their profile page | Pass |
+| Register page | The validation works for username and password length | Pass |
+| Register page | The password is hidden  | Pass |
+| Register page | The register button takes the user to their profile page | Pass |
+| Profile page | The title of the page is the current users username  | Pass |
+| Profile page | Only reviews made by the current user are displayed  | Pass |
+
+
+
 | Level 1 and Level 2 | The game board fits centrally within the screen| Pass |
 | Level 1 and Level 2| The button to start the game, starts the timer for the game | Pass |
 | Level 1 and Level 2| The link back to the home page takes you to the home page| Pass |
