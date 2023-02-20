@@ -63,10 +63,11 @@ I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overvie
 | ----------- | ----------- | ----------- |
 | All pages | There is a navigation bar displaying the logo "Fan of Scran" and navigation links, which all take you to the relevant page | Pass |
 | All Pages | When hovering over a link the pointer changes | Pass |
-| Home page | url linked in README.md displays Creature Corner homepage, and the frog Favicon is visbile | Pass |
-| Home page | There is a main title and a subtitle, giving more information about purpose of site | Pass |
-| Home page | The Play link takes you to level 1 of the memory game | Pass |
-| Home page | The Rules link opens up a modal explaining the rules| Pass |
+| All Pages | There is a footer with social media links that all open in a new tab | Pass |
+| Home page (Logged out) | url linked in README.md displays Fan of Scran homepage, and the Burger Favicon is visbile | Pass |
+| Home page | There is a main title and further information about purpose of site | Pass |
+| Home page | The register link takes you to the registration page | Pass |
+| Home page | The review accordian opens when clicked on and displays the review correctly | Pass |
 | Home page | Within the modal there are clear rules and a link to level 1 to start playing and a button to exit the modal | Pass |
 | Home page | The Animal facts link takes you to the facts page| Pass |
 | Level 1 and Level 2 | The game board fits centrally within the screen| Pass |
