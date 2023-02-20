@@ -10,7 +10,10 @@
 
 **Milestone 3 project - Back End Development - Code institute**
 
-Fan of Scran is a website for lovers of dining out. Users can browse reviews and upload their own reviews of their restaurant experiences
+Fan of Scran is a website for lovers of dining out. Users can browse reviews and upload their own reviews of their restaurant experiences. For the website name, "scran" is northern dialect, used as a word for food.
+
+### Project Focus
+The goal of this project is for the user to be able to create, read, update and delete (CRUD) restaurant reviews.
 
 ---
 
@@ -87,25 +90,25 @@ The website is organised by a hierarchical tree structure. This is a standard st
 
 #### The structure can be broken down into:
 Users who do not have an account/ are not logged in
-- Home page - 
-- Login page - 
-- Create an account page - 
+- Home page - Information about purpose of the site, links to login and register, the three latest reviews
+- Login page - Form to login with username and password
+- Create an account page - Form to register with username and password
 
 Users who are logged in
-- Home page - 
-- Reviews page - 
-- Cuisines page - 
-    - British cuisine page - 
-    - Chinese cuisine page - 
-    - French cuisine page - 
-    - Greek cuisine page - 
-    - Indian cuisine page - 
-    - Italian cuisine page - 
-    - Mexican cuisine page - 
-    - Spanish cuisine page - 
-    - Other world cuisines page - 
-- My reviews page -
-- Add review page - 
+- Home page - A link to add a review, a link to browse all reviews, and the three latest reviews
+- Reviews page - All reviews by all users, a search bar, and a link to create a new reviews
+- Cuisines page - Displays cards with links to all cuisines, including an image.
+    - British cuisine page - Lists all reviews for British restaurants
+    - Chinese cuisine page - Lists all reviews for Chineses restaurants
+    - French cuisine page - Lists all reviews for French restaurants
+    - Greek cuisine page - Lists all reviews for Greek restaurants
+    - Indian cuisine page - Lists all reviews for Indian restaurants
+    - Italian cuisine page - Lists all reviews for Italian restaurants
+    - Mexican cuisine page - Lists all reviews for Mexican restaurants
+    - Spanish cuisine page - Lists all reviews for Spanish restaurants
+    - Other world cuisines page - Lists all reviews for restaurants of any other cuisines.
+- My reviews page - Lists all reviews made by the user currently logged in
+- Add review page - Form to input all information to create a new review.
 
 ---
 
@@ -234,9 +237,9 @@ More custom features on the profile page, such as profile picture and "About me"
 
 ---
 ## Database Schema 
-
-I used dbdiagram to create a visualisation of my database schema
-![Database schema]()
+- [MongoDB Atlas](https://www.mongodb.com/atlas/database) is used for the storage of data for this site.
+- I used [dbdiagram](https://dbdiagram.io/home) to create a visualisation of my database schema. The database is made up four collections. 
+![Database schema](static/img/README/db-schema.png)
 
 
 ---
