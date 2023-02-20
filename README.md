@@ -349,7 +349,7 @@ I would like to thank
 - Code institute tutors - they helped me fix various problems and have taught me a lot
 - Manu Perez college instructor, for all of his help and guidance.
 - Pasquale Fasulo my college supervisor.
-- The photographers who publish royalty free images on Unsplash and Raw Pixel that allowed me to use high quality imagery throughout.
+- The photographers who publish royalty free images on Unsplash that allowed me to use high quality imagery throughout.
 - All of the code institute team, for providing quality learning content to allow me to develop my skills to complete this project.
 
 ---
