@@ -286,15 +286,46 @@ Click [here](testing.md) to view all testing carried out.
 
 ## Deployment
 
-### Steps taken to deploy project to GitHub Pages
-1. Go to **My repositories**.
-2. Select **bethanyalicehall/memory-final**.
-3. At the top of the page click on **Settings**.
-4. Scroll down and on the left hand side there is a **Pages** section.
-5. Under **Source** click the drop down menu and select **Main**.
-6. Click **Save**, the website will now be deployed (note it can take a minute or two to load).
+### Steps taken to create this database within MongoDB Atlas
+1. Login or create an account with [MongoDB Atlas](https://www.mongodb.com/atlas/database).
+2. Create a new cluster or navigate to a cluster.
+3. Within the collections of this cluster create a new database
+4. Navigate to  Database access and create a user, allowing read/write access. Make a note of the username and password as this will be needed for the MONGO_URI when deploying the project.
+5. Navigate to Network access and add the following connection <code>0.0.0.0/0</code>
+6. Within this databse create 4 collections, Review, Cuisines, Ratings, and Users.
+7. Add the following data fields to each collection
 
-### Access to code
+![Database schema](static/img/README/db-schema.png)
+
+8. From the databases tab, click connect, and then connect to your application. This will provide a url which should be copied into the env.py file within the MONGO_URI, don't forget to change the <code>password</code> within the link.
+
+### Steps taken to deploy project to Heroku
+1. Within the root directory add a Procfile and type inside this file <code>web: python app.py</code>. There must not be any blank lines or added spaces.
+2. In the command line run <code>pip3 freeze > requirements.txt</code>, this will create a file called requirements.txt.
+3. Ensure within the run.py file that debug is set to False. 
+
+![Screenshot of run.py file showing debug=False](static/img/README/debug.png)
+
+4. Add both of these files and push them to your github repository.
+4. Login or create an account on [Heroku](https://www.heroku.com/platform).
+5. Create a new app
+6. From your dashboard, click on the deploy tab and then connect the app to your GitHub repository, you can enable automatic deploys so that you do not need to manually deploy each time you make changes.
+
+![Screenshot of connecting to github in Heroku](static/img/README/heroku.png)
+
+7. Ensure that you have an env.py file set up within your root directory, this must be included within the .gitignore file as it should NOT be pushed to your repository. Within the env.py file should be the following.
+    - <code>("IP", "0.0.0.0")</code>
+    - <code>("PORT", "5000")</code>
+    - <code>("SECRET_KEY", "A UNIQUE KEY")</code>
+    - <code>("MONGO_URI", "LINK FROM MONGODB ATLAS")</code> Make sure to add in your password for the database access (not your mongoDB login)
+    - <code>("MONGO_DBNAME", "YOUR DATABASE NAME")</code>
+Each of the above will have <code>os.environ.get</code> before the brackets.
+8. Back in Heroku, from the dashboard click on settings. Set the config vars matching your code in the env.py file
+9. To check it is working, manually deploy the project, from the deploy page, this takes a few minutes.
+10. Click open app. 
+11. If there are any errors, view the log to identify the problem.
+
+### Access to this code
 1. Go to **My repositories**.
 2. Select **bethanyalicehall/memory-final**.
 3. At the top of the page click on **Code**, where **Zip files** can be downloaded locally.
@@ -304,13 +335,21 @@ Click [here](testing.md) to view all testing carried out.
 ## Credits 
 
 ### Media
-
+- [Unsplash](https://unsplash.com/) - this was used for the images throughout the site
+Click [here](media-sources.md) to see details of images used.
 
 ### Content
+- [Code institute boiler template](https://github.com/Code-Institute-Org/gitpod-full-template) was used.
+- [Materialize](https://materializecss.com/) was used for the navigation bar, footer, cards, forms and image containers, these were then styled in a different way.
+- I found the walkthrough project for the non-relational database on [Code Institute](https://codeinstitute.net/) very helpful to refer to throughout the building of this site, and some code was used from this such as the Login and Registration functions. 
 
   
-
 ### Acknowledgements
-
+I would like to thank
+- Code institute tutors - they helped me fix various problems and have taught me a lot
+- Manu Perez college instructor, for all of his help and guidance.
+- Pasquale Fasulo my college supervisor.
+- The photographers who publish royalty free images on Unsplash and Raw Pixel that allowed me to use high quality imagery throughout.
+- All of the code institute team, for providing quality learning content to allow me to develop my skills to complete this project.
 
 ---

@@ -181,7 +181,7 @@ The following browsers were used to check compatibility with the website
 ![Screenshot of admin ability to delete other user reviews](static/img/README/user-404.png)
 
 - Any external links (e.g. to our social media sites) to open in a new tab
-    - target="_blank" was added to each social media link so they open in a new tab
+    - <code>target="_blank"</code> was added to each social media link so they open in a new tab
 
 - Provide a secure registration/login for users
     - The passwords are stored within the database as a hash so are secure
@@ -191,5 +191,15 @@ The following browsers were used to check compatibility with the website
     - As this is just a concept and not a properly published game site, this cannot be measured. However friends and family said they like the idea and would use it.
 
 ## Identified bugs
-- Bug:
-    - How I fixed it: 
+- Bug: Rating drop down within the review form was not working
+    - How I fixed it: I had two return statements within the add_review function, once I realised this and combined it into one, the drop down worked.
+- Bug: Each time when trying to edit a task, the cuisine would be pre-filled in the form as British, even if that is not what was previously selected when the review was added.
+    - How I fixed it: I had accidentally deleted the 'selected' component within the if statment, within the edit_review file, adding this back in fixed the issue.
+- Bug: Ordering reviews by date
+    - How I fixed it: Initially I tried to order the reviews by date by using <code>.sort(date_visited)</code>, however this did not work as the date_visited is a string, so it was ordering it by only day (1st, 4th, 10th etc.) and not taking into account month or year. To correct this I used <code>.sort(_id) -1</code>, which then ordered the reveiws showing the most recently made reviews first.
+- Bug: Footer jumping up to middle of the page when there was not content within the main section, (e.g. if a user had not yet made any reviews, this would occur on the profile page)
+    - How I fixed it: I added the following CSS from Materialize documentation.
+
+![Screenshot of css used to add sticky footer](static/img/README/bug-css.png)
+
+
