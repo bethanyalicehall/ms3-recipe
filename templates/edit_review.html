@@ -9,7 +9,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensils prefix light-blue-text text-darken-4"></i>
-                <input id="restaurant_name" name="restaurant_name" minlength="5" maxlength="50"
+                <input id="restaurant_name" name="restaurant_name" minlength="2" maxlength="30"
                     value="{{ review.restaurant_name }}" type="text" class="validate" required>
                 <label for="restaurant_name">Restaurant Name</label>
             </div>
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-location-dot prefix light-blue-text text-darken-4"></i>
-                <input id="restaurant_location" name="restaurant_location" minlength="5" maxlength="50"
+                <input id="restaurant_location" name="restaurant_location" minlength="2" maxlength="30"
                     value="{{ review.restaurant_location }}" type="text" class="validate" required>
                 <label for="restaurant_location">Where is this restaurant?</label>
             </div>
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-seedling prefix light-blue-text text-darken-4"></i>
-                <textarea id="starter_description" name="starter_description" minlength="5" maxlength="200"
+                <textarea id="starter_description" name="starter_description" minlength="2" maxlength="200"
                     class="materialize-textarea validate" required>
                         {{- review.starter_description -}}
                     </textarea>
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-burger prefix light-blue-text text-darken-4"></i>
-                <textarea id="main_description" name="main_description" minlength="5" maxlength="200"
+                <textarea id="main_description" name="main_description" minlength="2" maxlength="200"
                     class="materialize-textarea validate" required>
                         {{- review.main_description -}}
                     </textarea>
@@ -61,7 +61,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-ice-cream prefix light-blue-text text-darken-4"></i>
-                <textarea id="dessert_description" name="dessert_description" minlength="5" maxlength="200"
+                <textarea id="dessert_description" name="dessert_description" minlength="2" maxlength="200"
                     class="materialize-textarea validate" required>
                         {{- review.dessert_description -}}
                     </textarea>
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-martini-glass-citrus prefix light-blue-text text-darken-4"></i>
-                <textarea id="drink_description" name="drink_description" minlength="5" maxlength="200"
+                <textarea id="drink_description" name="drink_description" minlength="2" maxlength="200"
                     class="materialize-textarea validate" required>
                         {{- review.drink_description -}}
                     </textarea>
