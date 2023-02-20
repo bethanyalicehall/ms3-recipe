@@ -62,6 +62,7 @@ I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overvie
 | Page | Element and expected action | Pass or Fail | 
 | ----------- | ----------- | ----------- |
 | All pages | There is a navigation bar displaying the logo "Fan of Scran" and navigation links, which all take you to the relevant page | Pass |
+| All Pages | When viewing on smaller screens the navigation bar is displayed as a sidenav with a burger menu | Pass |
 | All Pages | When hovering over a link the pointer changes | Pass |
 | All Pages | There is a footer with social media links that all open in a new tab | Pass |
 | All Pages | The website is responsive on desktop, tablet and mobile | Pass |
@@ -69,37 +70,48 @@ I utilised the [Lighthouse](https://developer.chrome.com/docs/lighthouse/overvie
 | Home page (Logged out) | There is a main title and further information about purpose of site | Pass |
 | Home page (Logged out) | The register link takes you to the registration page | Pass |
 | Home page (Logged out + logged in)| The review accordian opens when clicked on and displays the review correctly | Pass |
+| Home page (Logged out + logged in)| The latest reviews displays the three most recent reviews in order | Pass |
 | Home page (Logged in) | The add a review link takes you to the new review page | Pass |
 | Home page (Logged in) | The browse reviews link takes you to the reviews page | Pass |
+| Home page (Logged in) | The log out link, takes the user to the home page and displays a flash message to confirm the user has logged out. | Pass |
+| Home page (Logged in) | The edit button on each review takes the user to the edit review page. A user is only allowed to edit their own reviews  | Pass |
+| Home page (Logged in) | The delete button on each review opens a modal asking if the user is sure that they want to delete that review, and then if the user selects delete again, the review is succesfully deleted and a flash message confirms this to the user. A user is only allowed to delete their own reviews, apart from Admin who can delete any reviews.  | Pass |
 | Login page | The login page works succesfully and only allows registered users to login | Pass |
 | Login page | The password is hidden | Pass |
-| Login page | The login button takes the user to their profile page | Pass |
+| Login page | The login button takes the user to their profile page, and displays a flash message to welcome them | Pass |
 | Register page | The validation works for username and password length | Pass |
 | Register page | The password is hidden  | Pass |
-| Register page | The register button takes the user to their profile page | Pass |
+| Register page | The register button takes the user to their profile page, and displays a flash message to say their registration was successful | Pass |
 | Profile page | The title of the page is the current users username  | Pass |
-| Profile page | Only reviews made by the current user are displayed  | Pass |
-
-
-
-| Level 1 and Level 2 | The game board fits centrally within the screen| Pass |
-| Level 1 and Level 2| The button to start the game, starts the timer for the game | Pass |
-| Level 1 and Level 2| The link back to the home page takes you to the home page| Pass |
-| Level 1 and Level 2| The timer and the moves counter work correctly| Pass |
-| Level 1 and Level 2| Each card starts face down| Pass |
-| Level 1 and Level 2| Each card turns over when clicked on adn you can only turn 2 cards over at the same time| Pass |
-| Level 1 and Level 2| If two cards do not match they will go facedown | Pass |
-| Level 1 and Level 2| If two cards do match they will stay face up | Pass |
-| Level 1 and Level 2| Once all of the cards are face up the game ends and a winning message appears | Pass |
-| Level 1 and Level 2| Within the winning text, information is provided on the users game stats including how many moves they have made and the time they took | Pass |
-| Level 1 and Level 2| Within the winning text there is a link to play again on level 1 and this takes you to the game area again | Pass |
-| Level 1 and Level 2| Within the winning text there is a link to play level 2 and this takes you to the level 2 page | Pass |
-| Facts page | The main website name, a title and a subtitle are presented at the top of the page, providing some more information about what this page is about | Pass |
-| Facts page | There is a link back to the home page which works | Pass |
-| Facts page | There are 12 colourful square images of animals | Pass |
-| Facts page | When you click on any animal the card flips and the name of the animal and a fact is displayed about the correct animal | Pass |
-| Facts page | When you click on the fact the card will again flip and the animal will be displayed | Pass |
-
+| Profile page | Only reviews made by the current user are displayed, in order of when they were made (most recent first)  | Pass |
+| Profile page | The review accordian opens when clicked on and displays the review correctly | Pass |
+| Profile page | The edit button on each review takes the user to the edit review page  | Pass |
+| Profile page | The delete button on each review opens a modal asking if the user is sure that they want to delete that review, and then if the user selects delete again, the review is succesfully deleted and a flash message confirms this to the user  | Pass |
+| Review page | The add a review link takes you to the new review page | Pass |
+| Review page | The review accordian opens when clicked on and displays the review correctly | Pass |
+| Review page | All reviews are displayed, in order of when they were made (most recent first) | Pass |
+| Review page | The search function allows users to search for a review using either the restaurant name, location or rating | Pass |
+| Review page | The search function button displays all relevant reviews from the users search | Pass |
+| Review page | The clear search button returns the user back to all reviews | Pass |
+| Review page | If there are no reviews that match the users search, there will be a message to the user explaining this | Pass |
+| Review page | The edit button on each review takes the user to the edit review page. A user is only allowed to edit their own reviews   | Pass |
+| Review page | The delete button on each review opens a modal asking if the user is sure that they want to delete that review, and then if the user selects delete again, the review is succesfully deleted and a flash message confirms this to the user. A user is only allowed to delete their own reviews, apart from Admin who can delete any reviews. | Pass |
+| Cuisine page | Each cuisine card displayed has a relevant corresponding image and also the cuisine in the native language | Pass |
+| Cuisine page | Each cuisine card when clicked on displays the relevant cuisine page | Pass |
+| Specific cuisine page | The title of the page reflects the relevant cuisine | Pass |
+| Specific cuisine page | If there are no reviews of that cuisine, a message will be displayed explaining this | Pass |
+| Specific cuisine page | All reviews of that cuisine are displayed, in order of when they were made (most recent first)| Pass |
+| Specific cuisine page | The review accordian opens when clicked on and displays the review correctly | Pass |
+| Specific cuisine page | The edit button on each review takes the user to the edit review page. A user is only allowed to edit their own reviews | Pass |
+| Specific cuisine page | The delete button on each review opens a modal asking if the user is sure that they want to delete that review, and then if the user selects delete again, the review is succesfully deleted and a flash message confirms this to the user. A user is only allowed to delete their own reviews, apart from Admin who can delete any reviews. | Pass |
+| Add a review page | The page displays a form for the user to add a review | Pass |
+| Add a review page | Each text input works and validates successfully | Pass |
+| Add a review page | Each dropdown select works and validates successfully | Pass |
+| Add a review page | The submit review button successfully submits the form and displays a flash message to the user to confirm this. | Pass |
+| Edit review page | The page displays a form for the user to edit a review, and contains the relevant pre-filled fields within the form | Pass |
+| Edit review page | Each text input works and validates successfully | Pass |
+| Edit review page | Each dropdown select works and validates successfully | Pass |
+| Edit review page | The edit review button successfully submits the form and displays a flash message to the user to confirm that the form has been updated | Pass |
 
 
 ### Browser compatibility
